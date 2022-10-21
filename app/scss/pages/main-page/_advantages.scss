@@ -1,0 +1,131 @@
+.advantages {
+    position: relative;
+
+    padding-top: 30px; padding-bottom: 30px;
+    @include _768 {
+        padding-top: 50px; padding-bottom: 45px;
+    }
+    
+    @include _992 {
+        padding-top: 95px; padding-bottom: 82px;
+    }
+
+    // .advantages__image
+
+    &__image {
+        position: absolute;
+        right: 0; top: 0;
+        width: 50%; min-height: 100%;
+
+        z-index: -1;
+        text-align: right;
+
+        // .advantages__image--img
+
+        &--img {
+            user-select: none;
+        }
+    }
+
+    // .advantages__container
+
+    &__container {
+    }
+
+    // .advantages__info
+
+    &__info {
+        @include _992 {
+            max-width: 70%;
+        }
+    }
+
+    // .advantages__title
+
+    &__title {
+        text-align: center;
+
+        @include _768 {
+            text-align: left;
+        }
+    }
+
+    // .advantages__text
+
+    &__text {
+        padding-top: 15px;
+
+        font-size: 1rem;
+        line-height: 120%;
+        color: var(--black);
+
+        text-align: center;
+
+        @include _768 {
+            text-align: left;
+            font-size: 1.25rem;
+            padding-top: 25px;
+        }
+    }
+
+    // .advantages__list
+
+    &__list {
+        padding-top: 30px;
+        @media (min-width: 600px) {
+            padding-top: 50px;
+        }
+
+        margin: -18px auto;
+
+        @include _992 {
+            margin: -18px -20px;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+
+        
+
+        max-width: 632px;
+    }
+
+    // .advantages__item
+
+    &__item {
+
+        flex: 0 1 100%;
+        padding: 18px 0px;
+
+        @media (min-width: 600px) {
+            flex: 0 1 50%;
+            padding: 18px 20px;
+        }
+
+        // .advantages__item--body
+
+        &--body {
+            display: flex;
+        }
+
+        // .advantages__item--icon
+
+        &--icon {
+            flex: 0 0 25px;
+            width: 25px; height: 25px;
+            margin-right: 11px;
+
+            @media (min-width: 500px) {
+                margin-right: 20px;
+            }
+        }
+
+        // .advantages__item--text
+
+        &--text {
+            font-size: 0.875rem;
+            font-family: "Inter", sans-serif;
+            line-height: 133%;
+        }
+    }
+}

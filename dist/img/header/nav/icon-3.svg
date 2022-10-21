@@ -1,0 +1,13 @@
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 6L14.5 16" stroke="#FF3E3E" stroke-width="1.3" stroke-dasharray="1 1"/>
+<path d="M14.3937 4.40426H1.45752V3C1.45752 1.89543 2.35295 1 3.45752 1H14.3937C15.3337 1 16.0958 1.76207 16.0958 2.70213C16.0958 3.64219 15.3337 4.40426 14.3937 4.40426Z" stroke="#242424" stroke-width="1.3"/>
+<circle cx="3.15966" cy="2.70213" r="0.851064" stroke="#242424" stroke-width="1.3"/>
+<mask id="path-4-inside-1_1020_3" fill="white">
+<path d="M12 16.3H1V15H12V16.3Z"/>
+</mask>
+<path d="M12 16.3H1V15H12V16.3Z" fill="#242424"/>
+<path d="M1 16.3H-0.3V17.6H1V16.3ZM12 16.3V17.6H13.3V16.3H12ZM1 15V13.7H-0.3V15H1ZM12 15H13.3V13.7H12V15ZM1 17.6H12V15H1V17.6ZM2.3 16.3V15H-0.3V16.3H2.3ZM13.3 16.3V15H10.7V16.3H13.3ZM1 16.3H12V13.7H1V16.3Z" fill="#242424" mask="url(#path-4-inside-1_1020_3)"/>
+<path d="M1 13H12V13H1V13Z" stroke="#242424" stroke-width="1.3"/>
+<path d="M1 10H12V10H1V10Z" stroke="#242424" stroke-width="1.3"/>
+<path d="M1 7H12V7H1V7Z" stroke="#242424" stroke-width="1.3"/>
+</svg>

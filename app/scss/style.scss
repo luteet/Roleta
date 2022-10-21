@@ -1,0 +1,23 @@
+@import 'mixin';
+@import 'null';
+@import 'libs';
+@import 'vars';
+@import 'global';
+@import 'font';
+@import 'form';
+@import 'popup';
+
+@import 'main-sections/header';
+
+
+@import 'pages/main-page/intro';
+@import 'pages/main-page/gallery';
+@import 'pages/main-page/advantages';
+@import 'pages/main-page/consulting';
+@import 'pages/main-page/reviews';
+@import 'pages/main-page/about-us';
+@import 'pages/main-page/our-clients';
+@import 'pages/main-page/steps';
+
+
+@import 'main-sections/footer';

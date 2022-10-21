@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__row">
+            <div class="header__container container">
+                <a href="#" class="header__logo">
+                    <picture>
+                        <source srcset="img/logo.webp" type="image/webp">
+                        <img src="img/logo.png" alt="Svetainės logotipas" width="85" height="17" class="header__logo--img">
+                    </picture>
+                </a>
+                <div class="header__text hide-on-table">
+                    Roletai ir žaliuzės visų tipų langams pagal individualius išmatavimus.
+                </div>
+                <div class="header__rating hide-on-table">
+                    <img src="img/header/rating.svg" alt="" class="header__rating--img">
+                </div>
+                <div class="header__btn-wrapper hide-on-table">
+                    <a href="#sign-up-popup" class="header__btn btn _min open-popup">
+                        Užsakyti išmatavimą
+                    </a>
+                </div>
+                <div class="header__base-info">
+                    <span class="header__base-info--shedule hide-on-table">
+                        Susisiekite, I-V nuo 8:00 iki 18:00
+                    </span>
+                    <a href="tel:+37062435459" class="header__base-info--tel">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.60568 8.3978C10.9649 11.7561 11.727 7.87092 13.8658 10.0083C15.9278 12.0697 17.1129 12.4827 14.5004 15.0945C14.1732 15.3575 12.094 18.5215 4.78703 11.2166C-2.52082 3.91074 0.641335 1.82943 0.904396 1.50227C3.52326 -1.11676 3.92915 0.0752698 5.99115 2.1367C8.12999 4.27494 4.24645 5.03951 7.60568 8.3978Z" fill="#FF3E3E"/>
+                        </svg>
+                        +370 624 35459
+                    </a>
+                </div>
+                <button class="header__burger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="header__nav">
+            <div class="header__nav--bg"></div>
+            <div class="header__nav--body">
+                <div class="header__nav--container container">
+                    <div class="header__base-info visible-on-table">
+                        <span class="header__base-info--shedule">
+                            Susisiekite, I-V nuo 8:00 iki 18:00
+                        </span>
+                        <a href="tel:+37062435459" class="header__base-info--tel _large">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.60568 8.3978C10.9649 11.7561 11.727 7.87092 13.8658 10.0083C15.9278 12.0697 17.1129 12.4827 14.5004 15.0945C14.1732 15.3575 12.094 18.5215 4.78703 11.2166C-2.52082 3.91074 0.641335 1.82943 0.904396 1.50227C3.52326 -1.11676 3.92915 0.0752698 5.99115 2.1367C8.12999 4.27494 4.24645 5.03951 7.60568 8.3978Z" fill="#FF3E3E"/>
+                            </svg>
+                            +370 624 35459
+                        </a>
+                    </div>
+                </div>
+                <div class="header__nav--container container">
+                    <ul class="header__nav--list">
+                        <li class="header__nav--item hide-on-table">
+                            <a href="#sub-menu-1-start" class="header__nav--link _has-sub-menu" title="Produkcija">
+                                <img src="img/header/nav/icon-1.svg" alt="" class="header__nav--icon">
+                                <span>Produkcija</span>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-1-start">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item.html", [
+                                                    {"icon": '2', "title": 'Roletai', "text": 'Populiariausias sprendimas plastikiniams langams.', "id": '1-1'},
+                                                    {"icon": '3', "title": 'Roletai diena naktis', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.', "id": '1-2'},
+                                                    {"icon": '4', "title": 'Žaliuzės', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.', "id": '1-3'},
+                                                    {"icon": '5', "title": 'Romanetės', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.', "id": '1-4'},
+                                                    {"icon": '6', "title": 'Užuolaidos', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.', "id": '1-5'},
+                                                    {"icon": '7', "title": 'Tinkleliai', "text": 'Blackout roletai puikiai užtamsina patalpas.', "id": '1-6'},
+                                                    {"icon": '8', "title": 'Lauko gaminiai', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką', "id": '1-7'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-1-1">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-2">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-3">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-4">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-5">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-6">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-7">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                        <div class="header__sub--block" id="sub-menu-1-8">
+                                            <h2 class="header__sub--title">
+                                                Produkcija
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-2" class="header__nav--link _has-sub-menu" title="Roletai">
+                                <img src="img/header/nav/icon-2.svg" alt="" class="header__nav--icon">
+                                <span>Roletai</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-2">
+                                            <h2 class="header__sub--title">
+                                                Roletai
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-3" class="header__nav--link _has-sub-menu" title="Roletai diena naktis">
+                                <img src="img/header/nav/icon-3.svg" alt="" class="header__nav--icon">
+                                <span>Roletai diena naktis</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-3">
+                                            <h2 class="header__sub--title">
+                                                Roletai diena naktis
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-4" class="header__nav--link _has-sub-menu" title="Žaliuzės">
+                                <img src="img/header/nav/icon-4.svg" alt="" class="header__nav--icon">
+                                <span>Žaliuzės</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-4">
+                                            <h2 class="header__sub--title">
+                                                Žaliuzės
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-5" class="header__nav--link _has-sub-menu" title="Romanetės">
+                                <img src="img/header/nav/icon-5.svg" alt="" class="header__nav--icon">
+                                <span>Romanetės</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-5">
+                                            <h2 class="header__sub--title">
+                                                Romanetės
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-6" class="header__nav--link _has-sub-menu" title="Užuolaidos">
+                                <img src="img/header/nav/icon-6.svg" alt="" class="header__nav--icon">
+                                <span>Užuolaidos</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-6">
+                                            <h2 class="header__sub--title">
+                                                Užuolaidos
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#sub-menu-7" class="header__nav--link _has-sub-menu" title="Tinkleliai">
+                                <img src="img/header/nav/icon-7.svg" alt="" class="header__nav--icon">
+                                <span>Tinkleliai</span>
+                                <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.64639 3.475L2.99989 3.8285L5.82839 0.999999L5.12139 0.292999L2.99989 2.414L0.878387 0.292999L0.171387 0.999999L2.64639 3.475Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="header__nav--sub header__sub">
+                                <div class="header__sub--wrapper">
+                                    <div class="header__sub--place">
+                                        <div class="header__sub--block" id="sub-menu-7">
+                                            <h2 class="header__sub--title">
+                                                Tinkleliai
+                                            </h2>
+                                            <ul class="header__sub--list">
+                                                @@loop("_header-sub-item-2.html", [
+                                                    {"title": 'Kasetiniai roletai', "text": 'Populiariausias sprendimas plastikiniams langams.'},
+                                                    {"title": 'Klasikiniai roletai', "text": 'Laisvai kabantys roletai lengvai pritaikomi visiems langams.'},
+                                                    {"title": 'Roletai diena naktis', "text": 'Dvigubo audinio roletai. Juostos viena su kita besikeisdamos atlieka dienos ir nakties funkciją ir leidžia kontroliuoti šviesos srautą kambaryje.'},
+                                                    {"title": 'Roletai nuo saulės ir kaščio', "text": 'Puikus sprendimas apsisaugoti nuo saulės spindulių ir karščio ženkliai sumažinant kondicionavimo išlaidas.'},
+                                                    {"title": 'Roletai Glasgard', "text": 'Permatomi šviesą ir karštį atspindintys roletai iš specialios atspindinčios plėvelės.'},
+                                                    {"title": 'Tamsinantys roletai (Blackout)', "text": 'Blackout roletai puikiai užtamsina patalpas.'},
+                                                    {"title": 'Roletai Screen', "text": 'Permatomi roletai tinklelio tipo neuždengia vaizdo į lauką'},
+                                                    {"title": 'Roletai iš apačios į viršų', "text": 'Roleto kasetė montuojama lango apačioje, puikiai tinka patalpoms esančioms pirmame aukšte.'},
+                                                    {"title": 'Roletai Mini', "text": 'Mini roletai naudojami uždengti nedideliems langams.'},
+                                                ])
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__nav--item">
+                            <a href="#" class="header__nav--link" title="Kontaktai">
+                                <img src="img/header/nav/icon-8.svg" alt="" class="header__nav--icon">
+                                <span>Kontaktai</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__nav--container container visible-on-table">
+                    <ul class="header__nav--min-list">
+                        <li>
+                            <a href="#">
+                                Pagrindinis
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Apie mus
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Atsiliepimai
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Galerija
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                DUK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kaip užsakyti?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kontaktai
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>

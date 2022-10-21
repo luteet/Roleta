@@ -1,0 +1,209 @@
+.round-input {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: rgba(36, 36, 36, 1);
+    &::placeholder {
+        color: rgba(36, 36, 36, 0.4);
+    }
+
+    padding: 17px;
+
+    @media (min-width: 600px) {
+        padding: 25px;
+        font-size: 0.875rem;
+    }
+
+    border-radius: 100px;
+}
+
+.consultation-block {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include _992 {
+        flex-direction: row;
+    }
+
+    // .consultation-block__base-info
+
+    &__base-info {
+        max-width: 300px;
+    }
+
+    // .consultation-block__or
+
+    &__or {
+        padding: 15px 40px;
+        flex: 1 1 auto;
+
+        font-size: 1.25rem;
+        line-height: 100%;
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.9);
+
+        position: relative;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 40px; height: 1px;
+            opacity: .3;
+        }
+
+        &::before {
+            left: 0%; top: 50%;
+            transform: translate(-50%,0%);
+            background: linear-gradient(-90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &::after {
+            right: 0%; bottom: 50%;
+            transform: translate(100%,100%);
+            background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        @include _768 {
+            padding: 40px 0;
+
+            &::before, &::after {
+                width: 1px; height: 35px;
+            }
+
+            &::before {
+                left: 50%; top: 0;
+                transform: translate(0,0);
+                background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            &::after {
+                left: 50%; bottom: 0px; right: auto;
+                transform: translate(0,0);
+                background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            }
+        }
+    }
+
+    // .consultation-block__form
+
+    &__form {
+
+        flex: 0 1 53.75%;
+
+        display: grid;
+
+        text-align: center;
+
+        margin-bottom: -10px;
+
+        // .consultation-block__form--item
+
+        &--item {
+            grid-area: 1/1;
+
+            display: flex;
+            //align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+            &._hidden {
+                opacity: 0; visibility: hidden;
+            }
+        }
+    }
+
+    // .consultation-block__form-text
+
+    &__form-text {
+        flex: 1 1 100%;
+        color: var(--white);
+
+        padding-bottom: 10px;
+    }
+
+    // .consultation-block__label
+
+    &__label {
+        padding: 10px 0;
+        flex: 1 1 100%;
+
+        @media (min-width: 600px) {
+            flex: 0 1 50%; padding: 10px;
+        }
+    }
+
+    // .consultation-block__input
+
+    &__input {
+        width: 100%; max-width: 205px;
+        @media (min-width: 600px) {
+            max-width: 100%;
+        }
+    }
+
+    // .consultation-block__submit
+
+    &__submit {
+        width: 100%;
+        max-width: 205px;
+        @media (min-width: 600px) {
+            max-width: 100%;
+        }
+        min-height: 100%;
+    }
+
+    // .consultation-block__successful
+
+    &__successful {
+
+        color: var(--white);
+
+        display: flex;
+        align-items: center;
+
+        text-align: left;
+
+        // .consultation-block__successful--icon
+
+        &--icon {
+            margin-right: 20px;
+        }
+
+        // .consultation-block__successful--info
+
+        &--info {
+            font-family: "Mont", sans-serif;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        // .consultation-block__successful--title
+
+        &--title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            line-height: 133%;
+
+            padding-bottom: 4px;
+        }
+
+        // .consultation-block__successful--text
+
+        &--text {
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 115%;
+
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+

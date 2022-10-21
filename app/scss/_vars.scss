@@ -1,0 +1,88 @@
+
+
+$containerPadding: 15;
+
+$container: 1110 + ($containerPadding * 2);
+$containerMin: 1280 + ($containerPadding * 2);
+$containerLarge: 1560 + ($containerPadding * 2);
+
+:root {
+    --title-font: 'TT Norms', sans-serif;
+    --main-font: 'TT Norms', sans-serif;
+    
+    --accent: #FF3E3E;
+    --accent-dark: #C93A28;
+    --accent-light: #ff634f;
+
+    --light-gray: #EDEDED;
+    --light-gray-2: #dddddd;
+
+    --dark: #242424;
+    --dark-2: #161616;
+
+    --accent-gradient: linear-gradient(0deg, #C93A28 0%, #FF3E3E 100%);
+
+    --white: #FFF;
+    --black: #000;
+    --light-green: #25D366;
+
+    --container-padding: 15px;
+}
+
+@font-face {
+    @include font-include('TT Norms', 400, swap, normal, 'TTNorms-Regular');
+}
+
+@font-face {
+    @include font-include('TT Norms', 500, swap, normal, 'TTNorms-Medium');
+}
+
+@font-face {
+    @include font-include('TT Norms', 700, swap, normal, 'TTNorms-Bold');
+}
+
+@font-face {
+    @include font-include('TT Norms', 700, swap, italic, 'TTNorms-BoldItalic');
+}
+
+@font-face {
+    @include font-include('TT Norms', 800, swap, normal, 'TTNorms-ExtraBold');
+}
+
+@font-face {
+    @include font-include('TT Norms', 900, swap, normal, 'TTNorms-Black');
+}
+
+
+@font-face {
+    @include font-include('Inter', 300, swap, normal, 'Inter-LightBETA');
+}
+
+@font-face {
+    @include font-include('Inter', 400, swap, normal, 'Inter-Regular');
+}
+
+@font-face {
+    @include font-include('Inter', 500, swap, normal, 'Inter-Medium');
+}
+
+@font-face {
+    @include font-include('Inter', 600, swap, normal, 'Inter-SemiBold');
+}
+
+@font-face {
+    @include font-include('Inter', 700, swap, normal, 'Inter-Bold');
+}
+
+
+@font-face {
+    @include font-include('Mont', 400, swap, normal, 'Mont-Regular');
+}
+
+@font-face {
+    @include font-include('Mont', 600, swap, normal, 'Mont-SemiBold');
+}
+
+@font-face {
+    @include font-include('Mont', 700, swap, normal, 'Mont-Bold');
+}
