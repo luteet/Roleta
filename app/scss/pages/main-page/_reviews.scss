@@ -86,24 +86,47 @@
     // .reviews__list
 
     &__list {
-        margin-top: 30px;
+        padding-top: 30px;
+        margin: -5px;
         @include _768 {
-            margin-top: 50px;
+            padding-top: 50px;
+            margin: -10px;
         }
+        
+        @include _992 {
+            margin: -15px;
+        }
+
+        /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        
+
+        /* &.is-active {
+            display: flex;
+            flex-wrap: wrap;
+        } */
     }
 
     // .reviews__card
 
     &__card {
 
-        max-width: calc(50% - 10px);
+        flex: 0 1 50%;
+        padding: 5px;
 
         @include _768 {
-            max-width: calc(33.333% - 30px);
+            flex: 0 1 33.333%;
+            padding: 10px;
         }
         
         @include _992 {
-            max-width: calc(25% - 30px);
+            flex: 0 1 25%;
+            padding: 15px;
         }
 
         // .reviews__card--body

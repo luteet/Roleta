@@ -312,12 +312,12 @@ function removeSubActive(subMenu, alt) {
   }
 }
 
-let magicGrid = new MagicGrid({
+/* let magicGrid = new MagicGrid({
   container: ".reviews__list",
   static: true,
   animate: true,
   gutter: 30,
-});
+}); */
 
 
 
@@ -345,7 +345,7 @@ function resize() {
   resizeCheckFunc(768,
     function () {  // screen > 
 
-      magicGrid = new MagicGrid({
+      /* magicGrid = new MagicGrid({
         container: ".reviews__list",
         static: true,
         gutter: 30,
@@ -355,12 +355,12 @@ function resize() {
 
       setTimeout(() => {
         magicGrid.positionItems();
-      },0)
+      },0) */
 
   },
   function () {  // screen < 
 
-    magicGrid = new MagicGrid({
+    /* magicGrid = new MagicGrid({
       container: ".reviews__list",
       static: true,
       gutter: 10,
@@ -370,7 +370,7 @@ function resize() {
 
     setTimeout(() => {
       magicGrid.positionItems();
-    },0)
+    },0) */
 
   });
 
@@ -380,7 +380,23 @@ resize();
 
 window.onresize = resize;
 
+/* var stackup = new StackUp({
+  containerSelector: ".reviews__list",
+  itemsSelector: ".reviews__item",
+  gutter: 30,
+});
+stackup.initialize(); */
 
+masonry({
+  column: 4,
+  responsive: [{
+    breakpoint: 992, 
+    column: 3
+  }, {
+    breakpoint: 768,
+    column: 2
+  }]
+});
 
 let thisTarget;
 body.addEventListener('click', function (event) {

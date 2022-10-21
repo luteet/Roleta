@@ -25,7 +25,6 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^4.2.0",
-    "magic-grid": "^3.2.4",
     "normalize.css": "^8.0.1",
     "sass": "^1.45.0",
     "smoothscroll-polyfill": "^0.4.4",

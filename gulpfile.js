@@ -52,7 +52,7 @@ function images() {
 function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
-        'node_modules/magic-grid/dist/magic-grid.min.js', // Tab Filter
+        'app/js/simple-masonry.min.js', // Tab Filter
         //'node_modules/shufflejs/dist/shuffle.min.js', // Tab Filter
         //'node_modules/sticky-js/dist/sticky.min.js' // Sticky
         //'node_modules/jquery/dist/jquery.js', // jQuery
