@@ -638,20 +638,18 @@ window.addEventListener('scroll', function() {
   scrollPage();
 })
 
-/* fsLightboxInstances['gallery'].props.onOpen = () => console.log(fsLightboxInstances['gallery']);
-fsLightboxInstances['gallery'].props.onClose = () => console.log('Lightbox close!'); */
-fsLightboxInstances['gallery'].props.onOpen = function() {
-  const galleryItems = document.querySelector('#gallery').querySelectorAll('[data-fslightbox="gallery"]');
-
-  for(let index = 0; index < fsLightboxInstances['gallery'].elements.sourceMainWrappers.length; index++) {
-    const item = fsLightboxInstances['gallery'].elements.sourceMainWrappers[index];
-
-    //console.log();
-    item.insertAdjacentHTML("beforeend", `<div class="fslightbox-caption">${galleryItems[index].dataset.alt}</div>`)
-
-  }
-
-};
-//fsLightboxInstances['gallery'].props.onShow = () => console.log('Lightbox show!');
+if(fsLightboxInstances['gallery']) {
+  fsLightboxInstances['gallery'].props.onOpen = function() {
+    const galleryItems = document.querySelector('#gallery').querySelectorAll('[data-fslightbox="gallery"]');
+  
+    for(let index = 0; index < fsLightboxInstances['gallery'].elements.sourceMainWrappers.length; index++) {
+      const item = fsLightboxInstances['gallery'].elements.sourceMainWrappers[index];
+  
+      item.insertAdjacentHTML("beforeend", `<div class="fslightbox-caption">${galleryItems[index].dataset.alt}</div>`)
+  
+    }
+  
+  };
+}
 
 
