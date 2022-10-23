@@ -1,0 +1,230 @@
+@@include("html/_header.html")
+
+    <main class="main">
+        <section class="about-us-intro section-bg-wrapper light-text">
+            <div class="about-us-intro__bg section-bg">
+                <picture>
+                    <source srcset="img/main-page/intro/bg.webp" type="image/webp">
+                    <img src="img/main-page/intro/bg.jpg" alt="" width="640" height="360" loading="lazy" class="about-us-intro__bg--img section-bg__img">
+                </picture>
+            </div>
+            <div class="about-us-intro__container container">
+                <div class="about-us__forward page-forward visible-on-table">
+                    <a href="index.html" class="about-us__forward--link page-forward__link">
+                        <svg width="2" height="4" viewBox="0 0 2 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.0898585 1.80782L1.58992 0.557763C1.64092 0.515581 1.70655 0.495327 1.77244 0.501434C1.83834 0.507542 1.89913 0.539514 1.94151 0.590349C1.98388 0.641184 2.00438 0.706739 1.99852 0.772659C1.99266 0.838578 1.96092 0.89949 1.91025 0.942054L0.640662 1.99997L1.91025 3.05789C1.96112 3.10039 1.99303 3.16135 1.99899 3.22738C2.00494 3.2934 1.98445 3.35909 1.942 3.41001C1.89956 3.46093 1.83864 3.49292 1.77262 3.49895C1.7066 3.50498 1.64089 3.48457 1.58992 3.44218L0.0898585 2.19211C0.0617312 2.16861 0.0391059 2.13922 0.0235807 2.10602C0.00805533 2.07282 8.70228e-06 2.03661 8.70228e-06 1.99996C8.70228e-06 1.96331 0.00805533 1.92711 0.0235807 1.89391C0.0391059 1.8607 0.0617312 1.83132 0.0898585 1.80782Z" fill="white"/>
+                        </svg>
+                        Atgal
+                    </a>
+                </div>
+                <div class="about-us-intro__body about-us__body">
+                    <h2 class="about-us__title section-title">
+                        apie mus
+                    </h2>
+                    <div class="about-us__text">
+                        <p>
+                            Daugiau nei aštuonis metus kuriame grožį ir jaukumą mūsų klientų namuose.
+                            Kiekvienais metais dėka Jūsų atsiliepimų mes geriname paslaugų kokybę ir
+                            darome viską, kad Jums būtų malonu dirbti kartu su mumis.
+                        </p>
+                        <p>
+                            Mūsų jaukiame kolektyve dirba tik darbui atsidavę specialistai, kurie parinks Jums
+                            tinkamiausią sprendimą atsižvelgdami į Jūsų pageidavimus ir technines galimybes.
+                            Mes tikime, kad mūsų sėkmės raktas yra tinkamo produkto pateikimas klientams
+                            už prieinamą kainą.
+                        </p>
+                        <p>
+                            Nuolat sekame naujausias interjero dizaino tendenciijas. Mūsų asortimente rasite
+                            populiariausių Europos gamintojų prekės ženklus. Pristatome Vokietijos, Prancūzijos, Italijos, Ispanijos ir Lenkijos produkciją už prieinamą kainą. Siūlome rinktis iš
+                            daugiau nei 1200 roletų, 1500 žaliuzių, 4000 romanečių audinių. Turėdami didelę
+                            patirtį langų uždengimo srityje, padėsime išsirinkti tinkamiausius sprendimus Jūsų
+                            namams. Visus mūsų asortimente pristatomus produktus gaminame individualiai
+                            pagal užsakymą.
+                        </p>
+                        <p>
+                            Klientams siūlome konsultacijas, išmatavimą ir montavimą. Konsultuojame Jūsų
+                            namuose, padedame išsirinkti pageidaujamus gaminius ir audinius pagal indvidualius Jūsų poreikius. Bendradarbiaudami su savo klientais sukuriame viziją kuri virsta
+                            Jūsų namų gražia puošmena!
+                        </p>
+                    </div>
+                    <ul class="about-us__list">
+                        @@loop("html/main-page/_about-us-item.html", [
+                            {"value": '<strong>8000</strong><span>audinių</span>', "text": 'Siūlome rinktis iš daugiau nei 8000 tūkstančių įvairių gaminių audinių.'},
+                            {"value": '<strong>7500</strong><span>projektų</span>', "text": 'Įgyvendinome daugiau nei 7500 užsakymų.'},
+                            {"value": '<strong>80</strong><span>gaminių tipų</span>', "text": 'Galime pasiūlyti daugiau nei 80 skirtingų gaminių tipų.'},
+                            {"value": '<strong>24</strong><span>mėnesių garantija</span>', "text": 'Visiems gaminiams suteikiame 24 mėnesių garantija.'},
+                        ])
+                    </ul>
+                </div>
+            </div>
+            <div class="about-us-intro__scroll-down scroll-down">
+                <a href="#our-clients" class="about-us-intro__scroll-down--btn scroll-down__btn btn-to-scroll">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.00014 16.172L1.92914 10.101L0.515137 11.515L9.00014 20L9.70714 19.293L17.4851 11.515L16.0711 10.101L10.0001 16.172V0H8.00014V16.172Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section class="our-clients section-padding" id="our-clients">
+            <div class="our-clients__container container">
+                <h2 class="our-clients__title section-title txt-center">
+                    MŪSŲ KLIENTAI
+                </h2>
+                <ul class="our-clients__list">
+                    @@loop("html/main-page/_our-clients-item.html", [
+                        {"logo": '1'},
+                        {"logo": '2'},
+                        {"logo": '3'},
+                        {"logo": '4'},
+
+                        {"logo": '5'},
+                        {"logo": '6'},
+                        {"logo": '7'},
+                        {"logo": '8'},
+
+                        {"logo": '9'},
+                        {"logo": '10'},
+                        {"logo": '11'},
+                        {"logo": '12'},
+
+                        {"logo": '13'},
+                        {"logo": '14'},
+                        {"logo": '15'},
+                        {"logo": '16'},
+                    ])
+                </ul>
+            </div>
+        </section>
+        <section class="reviews section-padding">
+            <div class="reviews__container container">
+                <h2 class="reviews__title section-title txt-center">
+                    <span>MūsŲ KLIENTŲ</span> ATSILIEPIMAI
+                </h2>
+                <div class="reviews__rating rating-block">
+                    <div class="reviews__rating--block rating-block__col">
+                        <div class="reviews__rating--text">
+                            Vidutinis klientų įvertinimas:
+                        </div>
+                    </div>
+                    <div class="reviews__rating--block rating-block__col">
+                        <ul class="reviews__rating--star-list rating-block__star-list">
+                            <li class="reviews__rating--star-item rating-block__star-list--item">
+                                <img src="img/icons/start.svg" width="18" height="18" alt="" class="reviews__rating--star-icon rating-block__star-list--icon">
+                            </li>
+                            <li class="reviews__rating--star-item rating-block__star-list--item">
+                                <img src="img/icons/start.svg" width="18" height="18" alt="" class="reviews__rating--star-icon rating-block__star-list--icon">
+                            </li>
+                            <li class="reviews__rating--star-item rating-block__star-list--item">
+                                <img src="img/icons/start.svg" width="18" height="18" alt="" class="reviews__rating--star-icon rating-block__star-list--icon">
+                            </li>
+                            <li class="reviews__rating--star-item rating-block__star-list--item">
+                                <img src="img/icons/start.svg" width="18" height="18" alt="" class="reviews__rating--star-icon rating-block__star-list--icon">
+                            </li>
+                            <li class="reviews__rating--star-item rating-block__star-list--item">
+                                <img src="img/icons/start.svg" width="18" height="18" alt="" class="reviews__rating--star-icon rating-block__star-list--icon">
+                            </li>
+                        </ul>
+                        <strong class="reviews__rating--value rating-block__value">
+                            4.9 iš 5
+                        </strong>
+                    </div>
+                    <div class="reviews__rating--block rating-block__col">
+                        <div class="rating-block__decor-line"></div>
+                    </div>
+                    <div class="reviews__rating--block rating-block__col">
+                        <img src="img/trustbox.svg" width="73" height="21" alt="" class="reviews__rating--logo rating-block__logo">
+                    </div>
+                    <div class="reviews__rating--block rating-block__col">
+                        <span class="reviews__rating--min-text rating-block__text">
+                            Įvertinimas paremtas <b>160 atsiliepimų.</b>
+                        </span>
+                    </div>
+                </div>
+                <ul class="reviews__list js-masonry-list">
+                    @@loop("html/main-page/_review-item.html", [
+                        {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
+                        {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
+                        {"name": 'Gerda S.', "text": 'Turiu nuostabius roletus sumontuotus jūsų įmonės. Paslauga, kuri buvo suteikta, kad mano butas atrodytų gražesnis, puiki. Vadybininkas puikiai patarė dėl audinių ir kruopščiai išmatavo mano patalpas. Labai ačiū ir tikrai rekomenduočiau šią įmonę visiems, ieškantiems roletų arba žaliuzių!'},
+                        {"name": 'Viktorija A.', "text": 'Roleta ir visa komanda teikia išskirtines paslaugas. Jų dėmesys detalėms yra nuostabus – visos langų detalės yra pagamintos labai kokybiškai.'},
+                        {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
+                        {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
+                        {"name": 'Gerda S.', "text": 'Turiu nuostabius roletus sumontuotus jūsų įmonės. Paslauga, kuri buvo suteikta, kad mano butas atrodytų gražesnis, puiki. Vadybininkas puikiai patarė dėl audinių ir kruopščiai išmatavo mano patalpas. Labai ačiū ir tikrai rekomenduočiau šią įmonę visiems, ieškantiems roletų arba žaliuzių!'},
+                        {"name": 'Viktorija A.', "text": 'Roleta ir visa komanda teikia išskirtines paslaugas. Jų dėmesys detalėms yra nuostabus – visos langų detalės yra pagamintos labai kokybiškai.'},
+                        {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
+                        {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
+                        {"name": 'Gerda S.', "text": 'Turiu nuostabius roletus sumontuotus jūsų įmonės. Paslauga, kuri buvo suteikta, kad mano butas atrodytų gražesnis, puiki. Vadybininkas puikiai patarė dėl audinių ir kruopščiai išmatavo mano patalpas. Labai ačiū ir tikrai rekomenduočiau šią įmonę visiems, ieškantiems roletų arba žaliuzių!'},
+                        {"name": 'Viktorija A.', "text": 'Roleta ir visa komanda teikia išskirtines paslaugas. Jų dėmesys detalėms yra nuostabus – visos langų detalės yra pagamintos labai kokybiškai.'},
+                        {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
+                        {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
+                        {"name": 'Gerda S.', "text": 'Turiu nuostabius roletus sumontuotus jūsų įmonės. Paslauga, kuri buvo suteikta, kad mano butas atrodytų gražesnis, puiki. Vadybininkas puikiai patarė dėl audinių ir kruopščiai išmatavo mano patalpas. Labai ačiū ir tikrai rekomenduočiau šią įmonę visiems, ieškantiems roletų arba žaliuzių!'},
+                        {"name": 'Viktorija A.', "text": 'Roleta ir visa komanda teikia išskirtines paslaugas. Jų dėmesys detalėms yra nuostabus – visos langų detalės yra pagamintos labai kokybiškai.'},
+                    ])
+                </ul>
+                <div class="reviews__footer visible-on-table">
+                    <button class="reviews__btn btn" type="button">
+                        SKAITYTI DAUGIAU
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="consultation section-padding">
+            <div class="consultation__container container">
+                <div class="consultation__body">
+                    <div class="consultation__info txt-center">
+                        <h2 class="consultation__title section-title _light">
+                            Reikalinga konsultacija?
+                        </h2>
+                        <div class="consultation__text">
+                            Mielai atsakysime į visus Jūsų klausimus.
+                        </div>
+                    </div>
+                    <div class="consultation__row consultation-block">
+                        <div class="consultation__base-info consultation-block__base-info base-info txt-center _light">
+                            <span class="base-info__shedule">
+                                Skambinkite <br> I-V, nuo 8:00 iki 18:00
+                            </span>
+                            <a href="tel:+37062435459" class="base-info__tel-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.53174 10.4724C13.5208 14.4604 14.4258 9.84672 16.9656 12.3848C19.4143 14.8328 20.8216 15.3232 17.7192 18.4247C17.3306 18.737 14.8616 22.4943 6.1846 13.8197C-2.49348 5.144 1.26158 2.67244 1.57397 2.28395C4.68387 -0.826154 5.16586 0.589383 7.61449 3.03733C10.1544 5.5765 5.54266 6.48441 9.53174 10.4724Z" fill="#FF3E3E"/>
+                                </svg>
+                                +370 624 35459
+                            </a>
+                        </div>
+                        <div class="consultation__or consultation-block__or">
+                            arba
+                        </div>
+                        <form action="#" class="consultation__form consultation-block__form">
+                            <div class="consultation-block__form--item ">
+                                <span class="consultation-block__form-text">
+                                    Įveskite telefono numerį ir mes susieksime artimiausiu metu.
+                                </span>
+                                <label class="consultation-block__label">
+                                    <input type="tel" name="tel" placeholder="Jūsų telefono numeris" required class="consultation-block__input round-input">
+                                </label>
+                                <label class="consultation-block__label">
+                                    <button class="consultation-block__submit btn" type="submit">
+                                        Užregistruoti
+                                    </button>
+                                </label>
+                            </div>
+                            <div class="consultation-block__form--item _hidden">
+                                <div class="consultation-block__successful">
+                                    <img src="img/icons/successful-check.svg" width="52" height="52" loading="lazy" alt="" class="consultation-block__successful--icon">
+                                    <div class="consultation-block__successful--info">
+                                        <h3 class="consultation-block__successful--title">
+                                            Užklausa gauta
+                                        </h3>
+                                        <span class="consultation-block__successful--text">
+                                            Susisieksime artimiausiu metu
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@@include("html/_footer.html")

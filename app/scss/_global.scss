@@ -70,6 +70,16 @@ body {
 
     flex: 1 0 auto;
     transition: filter .2s ease-in-out;
+
+    padding-bottom: 15px;
+
+    @include _768 {
+        padding-bottom: 30px;
+    }
+    
+    @include _992 {
+        padding-bottom: 40px;
+    }
 }
 
 .container {
@@ -148,10 +158,6 @@ body {
     &:active {
         box-shadow: inset 0px 0px 15px rgba(100, 100, 100, 0.5);
     }
-}
-
-.popup {
-    
 }
 
 .hide-on-table {
@@ -292,6 +298,95 @@ body {
     }
 }
 
+.scroll-down {
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+        width: 30px; height: 30px;
+        margin-bottom: -15px;
+        border: 5px solid var(--white);
+
+        @include _768 {
+            width: 50px; height: 50px;
+            margin-bottom: -25px;
+            border: 7px solid var(--white);
+        }
+
+        @include _992 {
+            width: 77px; height: 77px;
+            margin-bottom: -38.5px;
+            border: 10px solid var(--white);
+        }
+        
+        border-radius: 50%; 
+
+        background: var(--black);
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+            width: 50%;
+        }
+    }
+
+    &__large-btn {
+        color: var(--dark);
+        font-weight: 500;
+        font-size: 0.75rem;
+
+        & svg {
+            margin-right: 10px;
+            width: 9px; height: 10px;
+        }
+
+        @include _768 {
+            font-size: 1rem;
+            border: 7px solid var(--white);
+            padding: 22px 30px;
+            margin-bottom: -38.5px;
+            
+            & svg {
+                margin-right: 15px;
+                width: 15px; height: 15px;
+            }
+        }
+        
+        @include _992 {
+            font-size: 1.25rem;
+            border: 10px solid var(--white);
+
+            & svg {
+                margin-right: 20px;
+                width: auto; height: auto;
+            }
+        }
+
+        line-height: 115%;
+        text-transform: uppercase;
+
+        display: inline-flex;
+        align-items: center;
+
+        background: var(--white);
+        padding: 9px 10px;
+
+        border: 5px solid var(--white);
+        
+        border-radius: 100px;
+
+        margin-bottom: -21px;
+
+        & svg {
+            & path {
+                fill: var(--dark);
+            }
+        }
+    }
+}
+
 .fslightbox-caption {
     position: absolute;
     left: 50%; bottom: 0px;
@@ -419,5 +514,104 @@ body {
                 transition: fill .2s ease-in-out;
             }
         }
+    }
+}
+
+.page-forward {
+
+    padding-bottom: 10px;
+
+    // .page-forward__link
+
+    &__link {
+        color: var(--white);
+        font-size: 0.75rem;
+        line-height: 115%;
+
+        display: inline-flex;
+        align-items: center;
+
+        & svg {
+            margin-right: 6px;
+        }
+    }
+}
+
+.page-address {
+
+    // .page-address__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: -5px;
+    }
+
+    // .page-address__item
+
+    &__item {
+        padding: 5px;
+    }
+
+    // .page-address__link
+
+    &__link {
+        color: var(--white);
+        font-size: 1.125rem;
+        line-height: 115%;
+
+
+    }
+}
+
+.slider-large-btn {
+    width: 34px; height: 34px;
+
+    @include _768 {
+        width: 50px; height: 50px;
+    }
+    
+    @include _992 {
+        width: 60px; height: 60px;
+    }
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    
+    &.swiper-button-disabled {
+        opacity: 1;
+
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            color: #AAAAAA;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%; height: 100%;
+        background: linear-gradient(0deg, #C93A28 0%, #FF3E3E 100%);
+        border-radius: 50%;
+        z-index: -1;
+        transition: opacity .2s ease-in-out;
+    }
+
+    &::after {
+        font-size: 8px;
+        @include _768 {
+            font-size: 14px;
+        }
+        font-weight: 900;
+        color: var(--white);
+        transition: color .2s ease-in-out;
     }
 }

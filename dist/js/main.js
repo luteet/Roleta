@@ -553,7 +553,12 @@ body.addEventListener('click', function (event) {
       event.preventDefault();
       let section;
     
-      section = document.querySelector(btnToScroll.getAttribute('href'))
+      try {
+        section = document.querySelector(btnToScroll.getAttribute('href'))
+      } catch {
+        section = 0
+      }
+      
     
       menu.forEach(elem => {
         elem.classList.remove('_active')
@@ -561,7 +566,7 @@ body.addEventListener('click', function (event) {
     
       window.scroll({
         left: 0,
-        top: (section) ? section.offsetTop : 0,
+        top: (section) ? (window.innerWidth <= 992) ? section.offsetTop - header.offsetHeight : section.offsetTop : 0,
         behavior: 'smooth'
       })
     
@@ -569,42 +574,140 @@ body.addEventListener('click', function (event) {
 
     // =-=-=-=-=-=-=-=-=-=- <Scroll to block> -=-=-=-=-=-=-=-=-=-=-
 
+
+
+    // =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
+
+    let faqItemQuestion = $('.faq__item--question');
+    if(faqItemQuestion) {
+
+      const item = faqItemQuestion.closest('.faq__item'),
+            answear = item.querySelector('.faq__item--answear');
+
+      
+      if(!item.classList.contains('_sliding')) {
+        item.classList.toggle('_active');
+      }
+
+      if(item.classList.contains('_active') && !item.classList.contains('_sliding')) {
+
+        item.classList.add('_sliding')
+        slideDown(answear);
+        setTimeout(() => {
+          item.classList.remove('_sliding')
+        },500)
+
+      } else if(!item.classList.contains('_active') && !item.classList.contains('_sliding')) {
+
+        item.classList.add('_sliding')
+        slideUp(answear);
+        setTimeout(() => {
+          item.classList.remove('_sliding')
+        },500)
+
+      }
+
+    }
+
+    // =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
+
 })
 
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
-/*
-let slider = new Swiper('.__slider', {
-  
-    spaceBetween: 30,
-    slidesPerView: 1,
-    centeredSlides: false,
 
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+
+
+
+
+
+
+
+
+
+
+
+
+let getIdeaGalleryslider = new Swiper('.get-idea__gallery-slider', {
+  
+  spaceBetween: 6,
+  slidesPerView: 6,
+
+  direction: "vertical",
+  
+  watchSlidesProgress: true,
+  
+  breakpoints: {
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 30,
     },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      992: {
-        slidesPerView: 3,
-        centeredSlides: true,
-    
-      },
-      600: {
-        slidesPerView: 2,
-        centeredSlides: false,
-      },
-    }
+  }
 }); 
-*/
+
+let getIdeaInfoslider = new Swiper('.get-idea__info-slider', {
+  
+  spaceBetween: 30,
+  slidesPerView: 1,
+
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+
+  
+ /*  thumbs: {
+    swiper: getIdeaImageslider
+  } */
+ 
+});
+
+let getIdeaImageslider = new Swiper('.get-idea__image-slider', {
+  
+  spaceBetween: 0,
+  slidesPerView: 1,
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+
+  thumbs: {
+    swiper: getIdeaGalleryslider
+  }
+
+  /* thumbs: {
+    swiper: getIdeaInfoslider
+  } */
+
+}); 
+
+
+
+const getIdeaInfoSliderLength = document.querySelector('.get-idea__info-slider--length');
+
+getIdeaInfoslider.on("slideChangeTransitionEnd", function() {
+
+let currentNumber;
+for(let index = 0; index < getIdeaInfoslider.slides.length; index++) {
+  if(getIdeaInfoslider.slides[index].classList.contains('swiper-slide-active')) {
+    currentNumber = (index+1 <= 9) ? '0' + (index + 1) : index + 1;
+  }
+}
+
+getIdeaInfoSliderLength.dataset.currentSlide = currentNumber;
+})
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
+document.querySelectorAll('.get-idea__gallery-slider--image').forEach(element => {
+  element.addEventListener('click', function (event) {
+    //console.log(event/* .target.closest('.get-idea__gallery-slider--image').parentElement */);
+
+  })
+  
+})
 
 /* 
 // =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=

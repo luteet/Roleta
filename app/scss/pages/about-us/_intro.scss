@@ -1,0 +1,47 @@
+.about-us-intro {
+
+    padding-top: calc(15px + var(--height-header, 50));
+    margin-bottom: 15px;
+
+    @include _768 {
+        padding-top: calc(36px + var(--height-header, 50));
+        margin-bottom: 30px;
+    }
+    
+    @include _992 {
+        padding-top: 116px;
+        margin-bottom: 60px;
+    }
+
+    // .about-us-intro__bg
+
+    &__bg {
+
+        // .about-us-intro__bg--img
+
+        &--img {
+        }
+    }
+
+    // .about-us-intro__container
+
+    &__container {
+    }
+
+    // .about-us-intro__body
+
+    &__body {
+        padding: 0 0 30px 0;
+
+        display: block;
+        
+        @include _768 {
+            padding: 0 0 60px 0;
+        }
+        
+        @include _992 {
+            padding: 0 0 100px 0;
+            display: grid;
+        }
+    }
+}

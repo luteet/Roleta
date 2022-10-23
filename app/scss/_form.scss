@@ -207,3 +207,38 @@
     }
 }
 
+.input, textarea {
+    
+    border-radius: 8px;
+
+    resize: none;
+
+    font-size: 0.75rem;
+    @include _768 {
+        font-size: 0.875rem;
+    }
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: rgba(36, 36, 36, 0.4);
+
+    padding: 15px 14px;
+
+    transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
+
+    &:focus {
+        color: var(--dark);
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    &::placeholder {
+        opacity: 1;
+        color: rgba(36, 36, 36, 0.4);
+        transition: opacity .2s ease-in-out;
+    }
+
+    &:focus::placeholder {
+        opacity: 0;
+    }
+}
+

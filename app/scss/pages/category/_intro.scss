@@ -1,0 +1,105 @@
+.category-intro {
+
+    padding-top: calc(20px + var(--height-header)); margin-bottom: 15px;
+
+    @include _768 {
+        padding-top: calc(30px + var(--height-header)); margin-bottom: 30px;
+    }
+    
+    @include _992 {
+        padding-top: 30px; padding-bottom: 30px; margin-bottom: 40px;
+    }
+
+    // .category-intro__bg
+
+    &__bg {
+
+        // .category-intro__bg--img
+
+        &--img {
+        }
+    }
+
+    // .category-intro__container
+
+    &__container {
+
+    }
+
+    // .category-intro__page-address
+
+    &__page-address {
+    }
+
+    // .category-intro__title
+
+    &__title {
+    }
+
+    // .category-intro__subtitle
+
+    &__subtitle {
+        @include _992 {
+            margin-top: 10px;
+        }
+        display: inline-block;
+
+        font-size: 1.5rem;
+        line-height: 115%;
+        font-feature-settings: 'liga' off;
+    }
+
+    // .category-intro__mob-title
+
+    &__mob-title {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 26px;
+        font-family: "Mont", sans-serif;
+        margin: 10px 0 0 0;
+    }
+
+    // .category-intro__text
+
+    &__text {
+        padding-top: 10px;
+
+        font-family: 'Mont', sans-serif;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 115%;
+
+        color: rgba(255, 255, 255, 0.7);
+
+    }
+
+    // .category-intro__advantages
+
+    &__advantages {
+    }
+
+    // .category-intro__footer
+
+    &__footer {
+    }
+
+    // .category-intro__scroll-down
+
+    &__scroll-down {
+
+        padding-top: 15px;
+
+        @include _768 {
+            padding-top: 30px;
+        }
+        
+        @include _992 {
+            padding-top: 0;
+        }
+
+        // .category-intro__scroll-down--btn
+
+        &--btn {
+        }
+    }
+}
