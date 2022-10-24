@@ -699,6 +699,44 @@ for(let index = 0; index < getIdeaInfoslider.slides.length; index++) {
 getIdeaInfoSliderLength.dataset.currentSlide = currentNumber;
 })
 
+let productMainGallerySlider = new Swiper('.product-main__gallery-slider', {
+  
+  spaceBetween: 6,
+  slidesPerView: 7,
+  
+  watchSlidesProgress: true,
+  
+  breakpoints: {
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 35,
+    },
+  }
+}); 
+
+let productMainSlider = new Swiper('.product-main__slider', {
+  
+  spaceBetween: 0,
+  slidesPerView: 1,
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  thumbs: {
+    swiper: productMainGallerySlider
+  }
+
+});
+
+//product-main__gallery-slider
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 document.querySelectorAll('.get-idea__gallery-slider--image').forEach(element => {

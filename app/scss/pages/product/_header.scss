@@ -1,0 +1,106 @@
+.product-header {
+
+    background: var(--dark);
+    padding: calc(var(--height-header) + 5px) 0 20px 0;
+    @include _768 {
+        padding: calc(var(--height-header) + 5px) 0 20px 0;
+    }
+    
+    @include _992 {
+        padding: 20px 0;
+    }
+
+    // .product-header__container
+
+    &__container {
+    }
+
+    // .product-header__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    // .product-header__col
+
+    &__col {
+        flex: 1 1 auto;
+        &:nth-child(2) {
+            flex: 0 1 150px;
+            @include _768 {
+                flex: 0 1 300px;
+            }
+            
+            text-align: right;
+        }
+    }
+
+    // .product-header__page-address
+
+    &__page-address {
+    }
+
+    // .product-header__title
+
+    &__title {
+    }
+
+    // .product-header__discount
+
+    &__discount {
+
+        text-align: right;
+        position: relative;
+        display: inline-block;
+
+        // .product-header__discount--value
+
+        &--value {
+            font-weight: 900;
+            font-size: 2.25rem;
+            line-height: 103%;
+            text-transform: uppercase;
+
+            @include _768 {
+                font-size: 3.5rem;
+            }
+            
+            @include _992 {
+                font-size: 5.3125rem;
+            }
+
+            background: linear-gradient(180deg, #FF4949 0%, #FF1D1D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            text-shadow: 0px 4px 250px #FF2222;
+        }
+
+        // .product-header__discount--name
+
+        &--name {
+            display: block;
+
+            font-size: 0.875rem;
+            line-height: 133%;
+            text-align: right;
+            font-feature-settings: 'liga' off;
+
+            @include _768 {
+                font-size: 1rem;
+            }
+            
+            @include _992 {
+                font-size: 1.125rem;
+
+                display: inline-block;
+                position: absolute;
+                left: 30px; top: 50%;
+                transform: translate(-100%,-125%);
+            }
+        }
+    }
+}
