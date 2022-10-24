@@ -22,7 +22,11 @@
     &__header {
         flex: 1 1 100%;
 
-        padding-top: 40px;
+        padding-top: 20px;
+
+        @include _768 {
+            padding-top: 40px;
+        }
     }
 
     // .product-main__add
@@ -38,13 +42,19 @@
             justify-content: center;
             flex-wrap: wrap;
 
-            margin: -15px;
+            margin: -2.5px;
+            @include _768 {
+                margin: -15px;
+            }
         }
 
         // .product-main__add--item
 
         &--item {
-            padding: 15px;
+            padding: 2.5px;
+            @include _768 {
+                padding: 15px;
+            }
         }
 
         // .product-main__add--label
@@ -52,6 +62,11 @@
         &--label {
             box-shadow: none !important;
             
+            padding: 6px 0 6px 6px;
+
+            @include _768 {
+                padding: 11px 0 11px 11px;
+            }
         }
     }
 
@@ -59,9 +74,13 @@
 
     &__block {
 
-        padding-top: 40px;
+        padding-top: 20px;
         flex: 1 1 100%;
         width: 100%;
+
+        @include _768 {
+            padding-top: 40px;
+        }
         
         @include _992 {
             flex: 0 1 calc(100% - (258px + 30px));
@@ -314,8 +333,12 @@
 
     &__aside {
 
-        padding-top: 30px;
+        padding-top: 20px;
         flex: 1 1 100%;
+
+        @include _768 {
+            padding-top: 30px;
+        }
 
         @include _992 {
             padding-top: 40px;

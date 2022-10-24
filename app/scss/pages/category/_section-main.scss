@@ -357,10 +357,11 @@
             margin-block: 2.5px;
             @include _768 {
                 margin-block: 5px;
+                font-size: 0.875rem;
             }
             padding: 11px 0 11px 11px;
 
-            font-size: 0.875rem;
+            font-size: 0.625rem;
             line-height: 133%;
             text-transform: uppercase;
 
@@ -382,21 +383,28 @@
             }
 
             & > * {
-                margin-right: 11px;
+                margin-right: 8px;
                 font-weight: 700;
 
                 display: none;
 
                 @include _768 {
                     display: block;
+                    margin-right: 11px;
                 }
+            }
+
+            &._not-hide > * {
+                display: block;
             }
 
             & svg {
                 display: block;
+                width: 12px;
 
                 @include _768 {
                     display: block;
+                    width: auto;
                 }
             }
         }
