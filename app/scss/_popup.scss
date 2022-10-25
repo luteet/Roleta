@@ -218,6 +218,7 @@
 
         &--body {
             font-size: 0.75rem;
+            line-height: 133%;
             @media (min-width: 600px) {
                 font-size: 0.875rem;
                 padding-left: 33px;
@@ -263,6 +264,10 @@
     // .sign-up-popup__base-info
 
     &__base-info {
+
+        & .base-info__shedule {
+            display: block;
+        }
     }
 
     // .sign-up-popup__or

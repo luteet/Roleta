@@ -111,10 +111,7 @@
                 grid-column: 2/2;
                 
                 color: rgba(255, 255, 255, 0.4);
-                font-size: 0.625rem;
-                @include _768 {
-                    font-size: 0.75rem;
-                }
+                font-size: 0.75rem;
                 
                 @include _992 {
                     font-size: 0.875rem;
@@ -234,9 +231,10 @@
 
         &--submit {
             margin-top: 5px;
+            min-width: min(144px, 100%);
             @include _768 {
                 margin-top: 10px;
-                min-width: min(144px, 100%);
+                
             }
             
         }

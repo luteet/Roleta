@@ -34,7 +34,6 @@
         }
         border-radius: 30px;
 
-        
     }
 
     // .about-us__bg
@@ -93,6 +92,7 @@
                 background: var(--accent);
                 opacity: .3;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -151,7 +151,7 @@
 
         &--text {
 
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             line-height: 133%;
             @include _768 {
                 font-size: 0.75rem;
@@ -170,8 +170,10 @@
         padding: 20px 0 0 0;
         max-width: 645px;
         font-size: 0.875rem;
-        @include _768 {
+        @media (min-width: 400px) {
             font-size: 1rem;
+        }
+        @include _768 {
             padding: 10px 10px 0 0;
         }
         & p {

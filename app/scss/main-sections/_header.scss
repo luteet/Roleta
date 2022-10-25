@@ -316,7 +316,7 @@
             align-items: center;
 
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: 0.6875rem;
             &._large {
                 font-size: 1.25rem;
                 
@@ -339,7 +339,7 @@
 
             & svg {
                 margin-right: 5px;
-                width: 12px;
+                width: 10px;
                 @include _768 {
                     width: 14px;
                 }
@@ -372,7 +372,7 @@
     &__burger {
         position: relative;
     
-        width: 30px; height: 30px;
+        width: 25px; height: 25px;
     
         background: transparent;
         overflow: hidden;
@@ -390,24 +390,24 @@
             position: absolute;
             left: 50%;
     
-            width: 75%; height: 3px;
+            width: 100%; height: 3px;
             border-radius: 5px;
             background: var(--accent);
             transition: transform .2s ease-in-out, top .2s ease-in-out;
     
             &:nth-child(1) {
-                top: 15%;
-                transform: translate(-50%,30%);
+                top: 10%;
+                transform: translate(-50%,0%);
             }
 
             &:nth-child(2) {
                 top: 50%;
-                transform: translate(-50%, -25%);
+                transform: translate(-50%, -50%);
                 opacity: 1; visibility: visible;
             }
 
             &:nth-child(3) {
-                top: 85%;
+                top: 90%;
                 transform: translate(-50%, -100%);
             }
         }
@@ -438,14 +438,6 @@
         left: 0; top: 0;
         width: 100%; min-height: 100vh;
         background: transparent;
-
-        /* &::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0;
-            width: 100vw; height: 100%;
-            background: #000;
-        } */
 
         @include _992 {
             border-top: 1px solid #24242426;
@@ -546,7 +538,7 @@
         &--min-list {
             padding: 0 10px;
 
-            font-size: 0.75rem;
+            font-size: 0.8125rem;
             line-height: 160%;
 
             & a {

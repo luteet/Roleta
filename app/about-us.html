@@ -101,7 +101,7 @@
                     <span>MūsŲ KLIENTŲ</span> ATSILIEPIMAI
                 </h2>
                 <div class="reviews__rating rating-block">
-                    <div class="reviews__rating--block rating-block__col">
+                    <div class="reviews__rating--block rating-block__col _full-on-mob">
                         <div class="reviews__rating--text">
                             Vidutinis klientų įvertinimas:
                         </div>
@@ -140,7 +140,7 @@
                         </span>
                     </div>
                 </div>
-                <ul class="reviews__list js-masonry-list">
+                <ul class="reviews__list js-masonry-list hide-blocks" id="reviews-list" data-hide-blocks-length="10">
                     @@loop("html/main-page/_review-item.html", [
                         {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
                         {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
@@ -161,7 +161,7 @@
                     ])
                 </ul>
                 <div class="reviews__footer visible-on-table">
-                    <button class="reviews__btn btn" type="button">
+                    <button class="reviews__btn btn hide-blocks-load" type="button" data-hide-blocks-id="#reviews-list">
                         SKAITYTI DAUGIAU
                     </button>
                 </div>

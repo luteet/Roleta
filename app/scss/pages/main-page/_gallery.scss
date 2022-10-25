@@ -36,7 +36,14 @@
         flex-wrap: wrap;
 
         margin: -2px;
-        padding-top: 67px;
+        padding-top: 28px;
+        @include _768 {
+            padding-top: 40px;
+        }
+        
+        @include _992 {
+            padding-top: 67px;
+        }
 
         counter-reset: gallery;
     }
@@ -209,6 +216,6 @@
     }
 
     &__btn {
-        margin-top: 34px;
+        margin-top: 24px;
     }
 }

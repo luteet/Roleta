@@ -1,8 +1,18 @@
 .consultation {
 
+    
+
     // .consultation__container
 
     &__container {
+        padding-bottom: 10px;
+        @include _768 {
+            padding-bottom: 0;
+        }
+        
+        @include _992 {
+            padding-bottom: 0;   
+        }
     }
 
     // .consultation__body

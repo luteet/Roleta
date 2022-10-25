@@ -170,6 +170,7 @@
             @include _768 {
                 align-self: center;
             } */
+            //width: 100%;
             & a {
                 
                 @include _768 {
@@ -261,10 +262,7 @@
                 padding-left: 14px;
                 position: relative;
 
-                font-size: 0.625rem;
-                @include _768 {
-                    font-size: 0.75rem;
-                }
+                font-size: 0.75rem;
                 
                 @include _992 {
                     font-size: 0.9375rem;

@@ -8,7 +8,7 @@
     // .reviews__title
 
     &__title {
-        padding-bottom: 0;
+        padding-bottom: 10px;
         @include _768 {
             padding-bottom: 10px;
         }
@@ -38,8 +38,12 @@
         &--text {
             font-size: 0.875rem;
             line-height: 115%;
+            width: 100%;
+            text-align: center;
 
             @include _768 {
+                text-align: left;
+                width: auto;
                 font-size: 1rem;
             }
             
@@ -97,19 +101,10 @@
             margin: -15px;
         }
 
-        /* display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; */
-
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-
         
-
-        /* &.is-active {
-            display: flex;
-            flex-wrap: wrap;
-        } */
     }
 
     // .reviews__card
@@ -132,7 +127,7 @@
         // .reviews__card--body
 
         &--body {
-            padding: 15px;
+            padding: 15px 10px;
             @include _768 {
                 padding: 20px;
             }
@@ -187,7 +182,7 @@
         &--name {
             font-weight: 700;
 
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             @media (min-width: 400px) {
                 font-size: 1rem;
             }
@@ -204,8 +199,8 @@
         &--check {
 
             position: absolute;
-            right: 0; top: 0;
-            transform: translate(100%,0);
+            right: -2px; top: 50%;
+            transform: translate(100%,-50%);
             
             @include _768 {
                 width: 11px; height: 11px;
@@ -217,6 +212,7 @@
         &--star-list {
             display: flex;
             align-items: center;
+            margin-left: -2px;
             @include _768 {
                 padding-top: 5px;
             }
@@ -256,16 +252,13 @@
 
         &--text {
             padding-top: 10px;
-            @media (min-width: 400px) {
-                font-size: 0.75rem;
-            }
 
             @include _768 {
                 padding-top: 20px;
                 font-size: 0.875rem;
             }
 
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             line-height: 133%;
 
             color: rgba(0, 0, 0, 0.8);

@@ -156,7 +156,7 @@
         // .category-main__aside-block--text
 
         &--text {
-            font-size: 0.75rem;
+            font-size: 0.8125rem;
             line-height: 133%;
             width: 100%;
 
@@ -193,7 +193,10 @@
             font-weight: 700;
             font-size: 0.75rem;
 
+            padding-left: 10px;
+
             @include _768 {
+                padding-left: 0;
                 font-size: 1rem;
             }
             
@@ -305,12 +308,14 @@
 
     &__card {
         flex: 0 1 50%;
+        width: 50%;
         padding: 5px;
         @include _768 {
             padding: 15px;
         }
         @include _992 {
             flex: 0 1 33.333%;
+            width: 33.333%;
         }
         
 
@@ -345,6 +350,8 @@
             align-items: flex-start;
             flex-direction: column;
 
+            z-index: 2;
+
             margin-top: -15px; margin-left: -10px;
             @include _768 {
                 margin-top: -20px;
@@ -358,8 +365,9 @@
             @include _768 {
                 margin-block: 5px;
                 font-size: 0.875rem;
+                padding: 11px 0 11px 11px;
             }
-            padding: 11px 0 11px 11px;
+            padding: 7px 2px 7px 11px;
 
             font-size: 0.625rem;
             line-height: 133%;
@@ -369,6 +377,8 @@
             align-items: center;
 
             border-radius: 70px;
+
+            //transition: width .2s ease-in-out;
 
             &._type-1 {
                 background: #FDF6DF;
@@ -386,11 +396,47 @@
                 margin-right: 8px;
                 font-weight: 700;
 
-                display: none;
+                //display: none;
 
                 @include _768 {
-                    display: block;
+                    //display: block;
                     margin-right: 11px;
+                }
+            }
+
+            & > strong {
+                /* width: 0; padding-right: 0;
+                margin-right: 0; */
+                width: 0; padding-right: 0;
+                margin-right: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                /* transition: width .2s ease-in-out; */
+            }
+
+            &._not-hide > strong {
+                width: auto;
+                padding-right: 5px;
+                @include _768 {
+                    padding-right: 10px;
+                }
+                max-width:  100%;
+            }
+
+            &:hover strong {
+                width: calc(var(--width) + 10px);
+                padding-right: 5px;
+                @include _768 {
+                    padding-right: 10px;
+                }
+                
+            }
+
+            &._not-hide:hover strong {
+                width: auto;
+                padding-right: 5px;
+                @include _768 {
+                    padding-right: 10px;
                 }
             }
 
@@ -404,7 +450,7 @@
 
                 @include _768 {
                     display: block;
-                    width: auto;
+                    width: 20px;
                 }
             }
         }
@@ -445,7 +491,7 @@
 
         &--text {
             color: var(--white);
-            font-size: 0.625rem;
+            font-size: 0.6875rem;
             line-height: 133%;
 
             padding: 40px 10px 10px 10px;
@@ -462,7 +508,10 @@
         // .category-main__card--footer
 
         &--footer {
-            padding-top: 10px;
+            padding-top: 5px;
+            @include _768 {
+                padding-top: 10px;
+            }
         }
 
         // .category-main__card--link
@@ -523,7 +572,7 @@
         }
 
         & p {
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             line-height: 133%;
             font-feature-settings: 'liga' off;
 
@@ -559,7 +608,8 @@
                 @include _992 {
                     font-size: 1.125rem;
                 }
-                font-size: 0.75rem;
+                
+                font-size: 0.875rem;
                 line-height: 115%;
                 font-feature-settings: 'liga' off;
 

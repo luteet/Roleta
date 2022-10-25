@@ -61,6 +61,8 @@ let slideDown = (target, duration=500) => {
   }, duration);
 }
 
+
+
 (function () {
   var FX = {
       easing: {
@@ -335,6 +337,37 @@ function resizeCheckFunc(size, minWidth, maxWidth) {
   }
 }
 
+const hideBlocksWrapper = document.querySelectorAll('.hide-blocks');
+
+function hideBlocks() {
+  
+  hideBlocksWrapper.forEach(hideBlocksWrapper => {
+    const length = Number(hideBlocksWrapper.dataset.hideBlocksLength),
+          blocks = hideBlocksWrapper.children;
+
+    for(let index = blocks.length-1, count = 0; index >= 0; index--, count++) {
+      if(count < length) {
+        blocks[index].classList.add('_hidden');
+      } else {
+        blocks[index].classList.remove('_hidden');
+      }
+    }
+
+    masonry({
+      column: 4,
+      responsive: [{
+        breakpoint: 992, 
+        column: 3
+      }, {
+        breakpoint: 768,
+        column: 2
+      }]
+    });
+    
+  })
+
+}
+
 function resize() {
 
   windowSize = window.innerWidth;
@@ -342,37 +375,17 @@ function resize() {
   html.style.setProperty('--width-scrollbar', windowSize - body.offsetWidth + 'px');
   html.style.setProperty('--height-screen', window.innerHeight + 'px')
 
-  resizeCheckFunc(768,
-    function () {  // screen > 
+  /* resizeCheckFunc(992,
+  function () {  // screen > 
 
-      /* magicGrid = new MagicGrid({
-        container: ".reviews__list",
-        static: true,
-        gutter: 30,
-      });
-
-      magicGrid.listen();
-
-      setTimeout(() => {
-        magicGrid.positionItems();
-      },0) */
+    
 
   },
   function () {  // screen < 
 
-    /* magicGrid = new MagicGrid({
-      container: ".reviews__list",
-      static: true,
-      gutter: 10,
-    });
+    
 
-    magicGrid.listen();
-
-    setTimeout(() => {
-      magicGrid.positionItems();
-    },0) */
-
-  });
+  }); */
 
 }
 
@@ -380,23 +393,9 @@ resize();
 
 window.onresize = resize;
 
-/* var stackup = new StackUp({
-  containerSelector: ".reviews__list",
-  itemsSelector: ".reviews__item",
-  gutter: 30,
-});
-stackup.initialize(); */
+hideBlocks()
 
-masonry({
-  column: 4,
-  responsive: [{
-    breakpoint: 992, 
-    column: 3
-  }, {
-    breakpoint: 768,
-    column: 2
-  }]
-});
+
 
 let thisTarget;
 body.addEventListener('click', function (event) {
@@ -611,22 +610,43 @@ body.addEventListener('click', function (event) {
 
     // =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
 
+
+
+    // =-=-=-=-=-=-=-=-=-=- <Hide blocks> -=-=-=-=-=-=-=-=-=-=-
+
+    let hideBlocksLoad = $('.hide-blocks-load');
+    if(hideBlocksLoad) {
+      event.preventDefault();
+
+      if(!hideBlocksLoad.classList.contains('_loading')) {
+        hideBlocksLoad.classList.add('_loading');
+
+        const id = hideBlocksLoad.dataset.hideBlocksId,
+              container = document.querySelector(id),
+              length = Number(container.dataset.hideBlocksLength);
+  
+        container.dataset.hideBlocksLength = ((length - 6) > 0) ? length - 6 : 0;
+
+        //console.log((length - 6))
+  
+        setTimeout(() => {
+          hideBlocks()
+          hideBlocksLoad.classList.remove('_loading');
+
+          if(container.dataset.hideBlocksLength == 0) {
+            hideBlocksLoad.style.display = 'none';
+          }
+        },200)
+      }
+      
+    }
+
+    // =-=-=-=-=-=-=-=-=-=- </Hide blocks> -=-=-=-=-=-=-=-=-=-=-
+
 })
 
 
-
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
-
-
-
-
-
-
-
-
-
-
-
 
 
 let getIdeaGalleryslider = new Swiper('.get-idea__gallery-slider', {
@@ -815,4 +835,26 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
     select: customSelect,
     showSearch: false
   })
+})
+
+const cardLabels = document.querySelectorAll('.category-main__card--label');
+
+cardLabels.forEach(cardLabel => {
+
+  const text = cardLabel.querySelector('strong');
+  
+  function getWidth() {
+    text.style.removeProperty('transition');
+    text.style.width = 'auto';
+    cardLabel.style.setProperty('--width', text.offsetWidth + 'px');
+    text.style.removeProperty('width');
+    text.style.transition = 'all .2s ease';
+  }
+
+  getWidth();
+
+  window.addEventListener('resize', function() {
+    getWidth();
+  })
+
 })

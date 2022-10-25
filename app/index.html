@@ -13,8 +13,11 @@
                     <span class="intro__subtitle">
                         Nuolaidos iki -60%
                     </span>
-                    <h1 class="intro__title main-title">
+                    <h1 class="intro__title main-title hide-on-table">
                         Roletų ir žaliuzių gamyba visų tipų langams pagal individualius išmatavimus
+                    </h1>
+                    <h1 class="intro__title main-title visible-on-table">
+                        Roletų ir žaliuzių gamyba visų tipų langams
                     </h1>
                     <p class="intro__text">
                         Pasirūpiname nuo audinių išrinkimo iki gaminių sumontavimo
@@ -126,7 +129,7 @@
                     Daugiau nei <mark>7500+</mark> namų puošia mūsų gaminiai
                 </h2>
             </div>
-            <ul class="gallery__list" id="gallery">
+            <ul class="gallery__list hide-blocks" data-hide-blocks-length="10" id="gallery">
                 @@loop("html/gallery/_item.html", [
                     {"alt": 'Roleta diena naktis'},
                     {"alt": 'Klasikiniai roletai'},
@@ -154,7 +157,7 @@
                 ])
             </ul>
             <div class="gallery__container container txt-center visible-on-table">
-                <a href="#" class="gallery__btn btn">
+                <a href="#" class="gallery__btn btn hide-blocks-load" data-hide-blocks-id="#gallery">
                     ŽIŪRĖTI DAUGIAU
                 </a>
             </div>
@@ -252,7 +255,7 @@
                     <span>MūsŲ KLIENTŲ</span> ATSILIEPIMAI
                 </h2>
                 <div class="reviews__rating rating-block">
-                    <div class="reviews__rating--block rating-block__col">
+                    <div class="reviews__rating--block rating-block__col _full-on-mob">
                         <div class="reviews__rating--text">
                             Vidutinis klientų įvertinimas:
                         </div>
@@ -291,7 +294,7 @@
                         </span>
                     </div>
                 </div>
-                <ul class="reviews__list js-masonry-list">
+                <ul class="reviews__list js-masonry-list hide-blocks" id="reviews-list" data-hide-blocks-length="10">
                     @@loop("html/main-page/_review-item.html", [
                         {"name": 'Rimantas A.', "text": 'Komanda atliko viso namo nuostabų darbą. Labai patenkinti!'},
                         {"name": 'Lina L.', "text": 'Tai pirmas kartas, kai romanetes užsakinėju šioje įmonėje ir esu sužavėta! Tiek roletų, tiek romanečių apdaila, kokybė ir prigludimas yra puikūs. Tikrai pasinaudosiu jųsų paslaugomis dar kartą.'},
@@ -312,7 +315,7 @@
                     ])
                 </ul>
                 <div class="reviews__footer visible-on-table">
-                    <button class="reviews__btn btn" type="button">
+                    <button class="reviews__btn btn hide-blocks-load" type="button" data-hide-blocks-id="#reviews-list">
                         SKAITYTI DAUGIAU
                     </button>
                 </div>

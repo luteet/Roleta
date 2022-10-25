@@ -221,19 +221,20 @@ body {
 
     &__col {
         flex: 0 1 auto;
-        padding: 0px 10px;
+        padding: 3px 10px;
 
         display: flex;
         align-items: center;
 
         &:first-child {
             position: relative;
-            /* &::after {
-                content: '';
-                position: absolute;
-                right: 0; top: 50%;
-                
-            } */
+        }
+
+        &._full-on-mob {
+            flex: 1 1 100%;
+            @include _768 {
+                flex: 0 1 auto;
+            }
         }
     }
 
@@ -424,8 +425,17 @@ body {
 
     &._min &__shedule {
         font-size: 0.625rem;
+        &::before {
+            width: 2px; height: 2px;
+            margin-top: 5px; margin-right: 10px;
+        }
         @include _768 {
             font-size: 0.9375rem;
+            &::before {
+                width: 6px; height: 6px;
+                margin-bottom: 3px; margin-right: 6px;
+                margin-top: 0;
+            }
         }
     }
 
@@ -436,10 +446,10 @@ body {
         }
 
         & svg {
-            width: 15px; height: 15px;
-            flex: 0 0 20px;
+            width: 8px; height: 8px;
+            flex: 0 0 12px;
 
-            margin-right: 5px;
+            margin-right: 3px;
 
             @include _768 {
                 width: 15px; height: 15px;
@@ -453,8 +463,9 @@ body {
     &__shedule {
         font-size: 0.875rem;
         padding-bottom: 14px;
-        display: block;
+        display: flex;
         @include _768 {
+            display: block;
             font-size: 1.25rem;
             padding-bottom: 0;
         }
@@ -466,7 +477,6 @@ body {
             width: 6px; height: 6px;
             border-radius: 50%;
             background: var(--light-green);
-
             margin-bottom: 3px; margin-right: 6px;
         }
 
@@ -525,7 +535,7 @@ body {
 
     &__link {
         color: var(--white);
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         line-height: 115%;
 
         display: inline-flex;
@@ -533,6 +543,7 @@ body {
 
         & svg {
             margin-right: 6px;
+            width: 8px; height: 8px;
         }
     }
 }
@@ -645,76 +656,16 @@ body {
     }
 }
 
-.ss-main {
-    font-weight: 700;
-    font-size: 0.875rem;
-    line-height: 133%;
-    color: var(--dark);
-}
+.hide-blocks {
+    & > * {
+        transition: opacity .2s ease-in-out, visiblity .2s ease-in-out;
 
-.ss-main .ss-single-selected {
-    border-radius: 20px;
-    background: var(--white);
-    border: 0;
-    padding: 11px 18px;
-    height: 38px;
-    transition: border-radius .2s ease-in-out;
-}
-
-
-
-.ss-content {
-    border: 0;
-    //border-radius: 0 0 15px 15px;
-    overflow: hidden;
-//    filter: drop-shadow(0,10px,0px,rgba(0, 0, 0, 0.527));
-    box-shadow: 0 14px 35px 0 rgb(0 0 0 / 9%);
-
-}
-
-.ss-single-selected.ss-open-above + .ss-content {
-    
-    border-radius: 15px 15px 0 0;
-}
-
-.ss-single-selected.ss-open-below + .ss-content {
-    border-radius: 0 0 15px 15px;
-}
-
-.ss-content .ss-list .ss-option:hover {
-    color: var(--dark);
-    background: var(--light-gray);
-}
-
-.ss-content .ss-list .ss-option:active {
-    color: var(--dark);
-    background: var(--light-gray);
-}
-
-.ss-content .ss-list .ss-option.ss-disabled:hover {
-    color: #dedede;
-    background: var(--white);
-}
-
-.ss-content .ss-list .ss-option.ss-disabled:active {
-    color: #dedede;
-    background: var(--white);
-}
-
-.ss-option {
-    transition: background .2s ease-in-out;
-   
-}
-
-.ss-content .ss-list .ss-option {
-    padding: 8px 18px;
-}
-
-.ss-main .ss-single-selected .ss-arrow span {
-    border-width: 0 1px 1px 0;
-    padding: 2px;
-}
-
-.ss-main .ss-single-selected .ss-arrow {
-    margin: 0;
+        @media (max-width: 992px) {
+            &._hidden {
+                opacity: 0; visibility: hidden;
+                pointer-events: none;
+                height: 0; padding: 0;
+            }
+        }
+    }
 }
