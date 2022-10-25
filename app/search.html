@@ -1,0 +1,130 @@
+@@include("html/_header.html")
+
+    <main class="main">
+        <section class="search-header section-bg-wrapper light-text">
+            <div class="search-header__bg section-bg">
+                <picture>
+                    <source srcset="img/contacts/intro/bg.webp" type="image/webp">
+                    <img src="img/contacts/intro/bg.jpg" alt="" width="0" height="0" loading="lazy" class="search-header__bg--img section-bg__img">
+                </picture>
+            </div>
+            <div class="search-header__container container">
+                <div class="search-header__page-address page-address visible-on-table">
+                    <ul class="page-address__list">
+                        <li class="page-address__item">
+                            <a class="page-address__link">
+                                Titulinis
+                            </a>
+                        </li>
+                        <li class="page-address__item">
+                            <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.54782 4.01954L1.17268 0.894406C1.05794 0.788953 0.910268 0.738316 0.762 0.753585C0.613732 0.768854 0.476952 0.848784 0.381612 0.975872C0.286272 1.10296 0.240142 1.26685 0.253325 1.43165C0.266508 1.59644 0.337928 1.74872 0.451947 1.85514L3.30851 4.49993L0.451947 7.14472C0.337489 7.25098 0.265674 7.40338 0.252276 7.56844C0.238879 7.7335 0.284996 7.89771 0.380497 8.02502C0.475997 8.15232 0.61307 8.23229 0.761606 8.24738C0.910141 8.26246 1.05799 8.21142 1.17268 8.10546L4.54782 4.98027C4.6111 4.92152 4.66201 4.84805 4.69694 4.76505C4.73188 4.68205 4.74998 4.59154 4.74998 4.49991C4.74998 4.40828 4.73188 4.31776 4.69694 4.23476C4.66201 4.15176 4.6111 4.07829 4.54782 4.01954Z" fill="white"/>
+                            </svg>
+                        </li>
+                        <li class="page-address__item">
+                            <a href="#" class="page-address__link">
+                                Roletai
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="search-header__title section-title">
+                    Audiniai
+                </h1>
+            </div>
+        </section>
+        <section class="search-main section-padding">
+            <div class="search-main__container container">
+                <form action="#" class="search-main__filter search-filter">
+                    <div class="search-filter__body">
+                        <ul class="search-filter__list">
+                            <li class="search-filter__item">
+                                <span class="search-filter__legend">
+                                    PASIRINKITE AUDINĮ
+                                </span>
+                                <select name="select-1" class="search-filter__select custom-select">
+                                    <option value="value-1">
+                                        Diena-naktis roletų audiniai
+                                    </option>
+                                    <option value="value-2">
+                                        Klasikinių roletų audiniai
+                                    </option>
+                                    <option value="value-3">
+                                        Fasado roletų audiniai
+                                    </option>
+                                    <option value="value-4">
+                                        Stoglangių roletų audiniai
+                                    </option>
+                                </select>
+                            </li>
+                            <li class="search-filter__item">
+                                <span class="search-filter__legend">
+                                    Pasirinkite spalvą
+                                </span>
+                                <select name="select-2" class="search-filter__select custom-select">
+                                    <option value="value-1">
+                                        Pasirinkite spalvą
+                                    </option>
+                                    <option value="value-2">
+                                        Pasirinkite spalvą
+                                    </option>
+                                    <option value="value-3">
+                                        Pasirinkite spalvą
+                                    </option>
+                                    <option value="value-4">
+                                        Pasirinkite spalvą
+                                    </option>
+                                </select>
+                            </li>
+                            <li class="search-filter__item">
+                                <span class="search-filter__legend">
+                                    Paieška
+                                </span>
+                                <label class="search-filter__label _icon-active">
+                                    <input type="search" name="search" placeholder="Paieška" class="search-filter__input">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.83317 9.49997C5.9415 9.49997 6.93317 9.14997 7.6915 8.50831L10.2582 11.075C10.3748 11.1916 10.5498 11.25 10.6665 11.25C10.7832 11.25 10.9582 11.1916 11.0748 11.075C11.3082 10.8416 11.3082 10.4916 11.0748 10.2583L8.50817 7.69164C9.0915 6.87497 9.49984 5.94164 9.49984 4.83331C9.49984 2.26664 7.39984 0.166641 4.83317 0.166641C2.2665 0.166641 0.166504 2.26664 0.166504 4.83331C0.166504 7.39997 2.2665 9.49997 4.83317 9.49997ZM4.83317 1.33331C6.75817 1.33331 8.33317 2.90831 8.33317 4.83331C8.33317 6.75831 6.75817 8.33331 4.83317 8.33331C2.90817 8.33331 1.33317 6.75831 1.33317 4.83331C1.33317 2.90831 2.90817 1.33331 4.83317 1.33331Z" fill="black" fill-opacity="0.6"/>
+                                    </svg>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="search-main__result">
+                    <ul class="search-main__result--list">
+                        @@loop("html/search/_result-item.html", [
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                        ])
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@@include("html/_footer.html")

@@ -797,7 +797,7 @@ window.addEventListener('scroll', function() {
 
 if(fsLightboxInstances['gallery']) {
   fsLightboxInstances['gallery'].props.onOpen = function() {
-    const galleryItems = document.querySelector('#gallery').querySelectorAll('[data-fslightbox="gallery"]');
+    const galleryItems = document.querySelectorAll('[data-fslightbox="gallery"]');
   
     for(let index = 0; index < fsLightboxInstances['gallery'].elements.sourceMainWrappers.length; index++) {
       const item = fsLightboxInstances['gallery'].elements.sourceMainWrappers[index];
@@ -810,3 +810,9 @@ if(fsLightboxInstances['gallery']) {
 }
 
 
+document.querySelectorAll('.custom-select').forEach(customSelect => {
+  new SlimSelect({
+    select: customSelect,
+    showSearch: false
+  })
+})

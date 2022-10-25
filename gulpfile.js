@@ -52,7 +52,8 @@ function images() {
 function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
-        'app/js/simple-masonry.min.js', // Tab Filter
+        'app/js/simple-masonry.min.js',
+        'node_modules/slim-select/dist/slimselect.min.js',
         //'node_modules/shufflejs/dist/shuffle.min.js', // Tab Filter
         //'node_modules/sticky-js/dist/sticky.min.js' // Sticky
         //'node_modules/jquery/dist/jquery.js', // jQuery
@@ -135,6 +136,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Слайдер
+        'node_modules/slim-select/dist/slimselect.min.css',
         //'node_modules/slick-carousel/slick/slick.css', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/magnific-popup.css' // Попап (jQuery)
         //'node_modules/aos/dist/aos.css', // Анимация

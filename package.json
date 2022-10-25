@@ -27,6 +27,7 @@
     "gulp-zip": "^4.2.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.45.0",
+    "slim-select": "^1.27.1",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^8.4.4"
   }
