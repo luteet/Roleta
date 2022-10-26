@@ -540,11 +540,12 @@
         &--min-list {
             padding: 0 10px;
 
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
             line-height: 160%;
 
             & a {
                 color: rgba(36, 36, 36, 0.8);
+                line-height: 150%;
             }
         }
 
@@ -706,16 +707,12 @@
         @include _992 {
             display: flex;
             justify-content: flex-start;
-            //width: 100%;
         }
 
         &--wrapper {
             display: flex;
             
-            //width: 100%;
             max-width: #{$container}px;
-
-            //padding-left: var(--x, 0);
             
         }
         
@@ -724,11 +721,7 @@
             & > * {
                 grid-area: 1/1;
             }
-
-            /* width: 100%;
-            @include _992 {
-                width: 33.333%;
-            } */
+            
         }
 
         // .header__sub--block
@@ -737,13 +730,15 @@
             align-self: start;
             padding: 10px 0;
 
-            width: 380px;
+            width: 100%;
             
             @include _992 {
                 background: var(--white);
 
                 padding: 30px 15px;
                 box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+
+                width: 380px;
 
                 opacity: 0; visibility: hidden;
                 transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
