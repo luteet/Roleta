@@ -135,11 +135,7 @@
             & span {
                 padding-left: 4px;
                 line-height: 133%;
-                font-size: 0.75rem;
-
-                @include _768 {
-                    font-size: 0.75rem;
-                }
+                font-size: 0.875rem;
                 
                 @include _992 {
                     font-size: 1rem;
@@ -151,10 +147,9 @@
 
         &--text {
 
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             line-height: 133%;
             @include _768 {
-                font-size: 0.75rem;
                 padding-top: 11px;
             }
             
@@ -169,7 +164,7 @@
     &__text {
         padding: 20px 0 0 15px;
         max-width: 645px;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         line-height: 150%;
         @media (min-width: 400px) {
             font-size: 1rem;

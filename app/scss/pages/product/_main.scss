@@ -62,10 +62,10 @@
         &--label {
             box-shadow: none !important;
             
-            padding: 6px 0 6px 6px;
+            padding: 6px;
 
             @include _768 {
-                padding: 11px 0 11px 11px;
+                padding: 11px 6px 11px 11px;
             }
         }
     }
@@ -276,19 +276,21 @@
 
     &__base-info {
 
-        background: var(--light-gray);
+        background: var(--light);
         border-radius: 20px;
 
         display: flex;
         flex-direction: column;
 
         padding: 20px;
+        margin-bottom: 28%;
 
         // .product-main__base-info--shedule
 
         &--shedule {
             font-size: 1.25rem;
             line-height: 133%;
+            padding-left: 13px;
             &::before {
                 content: '•';
                 color: var(--light-green);
@@ -303,7 +305,6 @@
             font-weight: 700;
             font-size: 1.5rem;
             line-height: 133%;
-            letter-spacing: -0.06em;
             & svg {
                 margin-right: 5px;
                 & path {
@@ -490,6 +491,10 @@
             width: 100%; padding-top: 100%;
         }
 
+        &--item-body:hover &--item-name {
+            opacity: 1; visibility: visible;
+        }
+
         // .product-main__config-block--img
 
         &--img {
@@ -518,6 +523,8 @@
         // .product-main__config-block--item-name
 
         &--item-name {
+            pointer-events: none;
+            
             position: absolute;
             left: 50%; top: 50%;
             transform: translate(-50%,-50%);
@@ -532,6 +539,9 @@
 
             padding: 2px 8px;
             border-radius: 50px;
+
+            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+            opacity: 0; visibility: hidden;
 
             @include _768 {
                 font-size: 0.75rem;

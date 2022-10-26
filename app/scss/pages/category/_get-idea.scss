@@ -228,7 +228,7 @@
             flex: 0 1 calc(55% - 5px);
             margin-right: 5px;
             @include _768 {
-                flex: 0 1 calc(50% - 10px);
+                flex: 0 1 calc(55% - 10px);
                 margin-right: 10px;
             }
             
@@ -261,7 +261,7 @@
             margin-left: 5px;
 
             @include _768 {
-                width: calc(50% - 10px);
+                width: calc(45% - 10px);
                 font-size: 0.75rem;
                 margin-left: 10px;
             }
@@ -358,6 +358,7 @@
 
         &--slide {
             text-align: right;
+            cursor: pointer;
         }
 
         // .get-idea__gallery-slider--image

@@ -110,7 +110,7 @@
                 z-index: 2;
 
                 font-weight: 300;
-                font-size: 0.75rem;
+                font-size: 0.875rem;
                 line-height: 40%;
 
                 @include _768 {
@@ -130,6 +130,9 @@
         &--title {
             font-weight: 700;
             font-size: 0.75rem;
+            @media (min-width: 360px) {
+                font-size: 0.875rem;
+            }
             line-height: 133%;
             text-transform: uppercase;
 
@@ -166,11 +169,6 @@
         // .steps__card--base-info
 
         &--base-info {
-            /* align-self: flex-start;
-            @include _768 {
-                align-self: center;
-            } */
-            //width: 100%;
             & a {
                 
                 @include _768 {
@@ -186,13 +184,6 @@
             line-height: 133%;
 
             padding: 10px 0;
-            /* @include _768 {
-                padding: 10px 55px;
-            }
-            
-            @include _992 {
-                padding: 10px 55px;
-            } */
 
             color: rgba(255, 255, 255, 0.5);
 

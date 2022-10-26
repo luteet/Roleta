@@ -286,9 +286,17 @@ function removeSubActive(subMenu, alt) {
       document.querySelectorAll('.header__nav--link._active').forEach(headerNavLink => {
         headerNavLink.classList.remove('_active')
       })
+
+      document.querySelectorAll('.header__nav--link._hover').forEach(headerNavLink => {
+        headerNavLink.classList.remove('_hover')
+      })
     
       document.querySelectorAll('.header__sub--link._active').forEach(headerSubLink => {
         headerSubLink.classList.remove('_active')
+      })
+
+      document.querySelectorAll('.header__sub--link._hover').forEach(headerSubLink => {
+        headerSubLink.classList.remove('_hover')
       })
 
     } else {
@@ -368,12 +376,152 @@ function hideBlocks() {
 
 }
 
+const mainLinks = document.querySelectorAll('.header__nav--link'),
+      subLinks = document.querySelectorAll('.header__sub--link'),
+      subBlocks = document.querySelectorAll('.header__sub--block'),
+      subPlace = document.querySelectorAll('.header__sub--place'),
+      headerNavItems = document.querySelectorAll('.header__nav--item');
+
+mainLinks.forEach(mainLink => {
+  mainLink.addEventListener('mouseenter', function (event) {
+
+      if(windowSize >= 992) {
+        
+        if(!mainLink.classList.contains('_hover')) {
+
+          if(mainLink.classList.contains('_has-sub-menu')) {
+
+            removeSubActive()
+            if(document.querySelector('.header__nav--link._hover')) {
+              document.querySelector('.header__nav--link._hover').classList.remove('_hover')
+            }
+    
+            const headerSubBlock = document.querySelector(mainLink.getAttribute('href'));
+            headerSubBlock.classList.add('_active');
+            mainLink.classList.add('_hover');
+          }
+
+        }
+
+      }
+      
+  })
+
+  /* subLink.addEventListener('mouseleave', function (event) {
+
+    if(windowSize >= 992) {
+
+      //console.log('blur')
+      subLink.classList.remove('_hover')
+      //console.log(subLink.getAttribute('href'))
+      removeSubActive(subLink.getAttribute('href'), true)
+
+    }
+    
+  }) */
+
+})
+
+subLinks.forEach(subLink => {
+  subLink.addEventListener('mouseenter', function (event) {
+
+      if(windowSize >= 992) {
+        
+        if(!subLink.classList.contains('_hover')) {
+
+          if(subLink.classList.contains('_has-sub-menu')) {
+
+            if(document.querySelector('.header__sub--link._hover')) {
+              removeSubActive(document.querySelector('.header__sub--link._hover').getAttribute('href'), true)
+              document.querySelector('.header__sub--link._hover').classList.remove('_hover')
+            }
+    
+            const headerSubBlock = document.querySelector(subLink.getAttribute('href'));
+            headerSubBlock.classList.add('_active');
+            subLink.classList.add('_hover');
+          }
+
+        }
+
+      }
+      
+  })
+
+  /* subLink.addEventListener('mouseleave', function (event) {
+
+    if(windowSize >= 992) {
+
+      //console.log('blur')
+      subLink.classList.remove('_hover')
+      //console.log(subLink.getAttribute('href'))
+      removeSubActive(subLink.getAttribute('href'), true)
+
+    }
+    
+  }) */
+
+})
+
+headerNavItems.forEach(headerNavItem => {
+  
+  headerNavItem.addEventListener('mouseleave', function (event) {
+
+    headerNavItem.querySelectorAll('.header__sub--block').forEach(subBlock => {
+      //subBlock.classList.remove('_active')
+      removeSubActive()
+    })
+    /* if(!event.toElement.classList.contains('_has-sub-menu') && !event.toElement.classList.contains('.header__sub--place') && !event.toElement.classList.contains('.header__sub--block')) {
+      headerNavItems.querySelectorAll('.header__sub--block').forEach(subBlock => {
+        subBlock.classList.remove('_active')
+      })
+    } */
+    
+
+    /* if(windowSize >= 992) {
+      
+      if(!subLink.classList.contains('_hover')) {
+
+        if(subLink.classList.contains('_has-sub-menu')) {
+
+          if(document.querySelector('.header__sub--link._hover')) {
+            removeSubActive(document.querySelector('.header__sub--link._hover').getAttribute('href'), true)
+          }
+  
+          const headerSubBlock = document.querySelector(subLink.getAttribute('href'));
+          headerSubBlock.classList.add('_active');
+          subLink.classList.add('_hover');
+        }
+
+      }
+
+    } */
+    
+})
+})
+
+const headerContainer = document.querySelector('.header__container');
+
+
 function resize() {
 
   windowSize = window.innerWidth;
   html.style.setProperty('--height-header', header.offsetHeight + 'px');
   html.style.setProperty('--width-scrollbar', windowSize - body.offsetWidth + 'px');
   html.style.setProperty('--height-screen', window.innerHeight + 'px')
+
+  
+
+  mainLinks.forEach(mainLink => {
+    
+    if((windowSize / 2 - 0) > (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left)) {
+      mainLink.parentElement.style.setProperty('--x', getCoords(mainLink.parentElement).left - getCoords(headerContainer).left + 'px');
+    } else {
+      mainLink.parentElement.classList.add('_reverse');
+      mainLink.parentElement.style.setProperty('--x', 0 + 'px');
+    }
+    //console.log(headerContainer.offsetWidth + ' ' + (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left) + ' ' + windowSize)
+    
+  })
 
   /* resizeCheckFunc(992,
   function () {  // screen > 
@@ -394,7 +542,6 @@ resize();
 window.onresize = resize;
 
 hideBlocks()
-
 
 
 let thisTarget;
@@ -644,6 +791,8 @@ body.addEventListener('click', function (event) {
     // =-=-=-=-=-=-=-=-=-=- </Hide blocks> -=-=-=-=-=-=-=-=-=-=-
 
 })
+
+
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=

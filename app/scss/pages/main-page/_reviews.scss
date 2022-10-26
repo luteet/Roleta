@@ -168,8 +168,10 @@
             }
             @include _768 {
                 width: 45px; height: 45px;
-                border-radius: 50%;
             }
+
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         // .reviews__card--info
@@ -236,10 +238,7 @@
 
         &--time {
             padding-top: 0;
-            font-size: 0.625rem;
-            @media (min-width: 400px) {
-                font-size: 0.75rem;
-            }
+            font-size: 0.75rem;
             @include _768 {
                 padding-top: 5px;
             }
@@ -252,15 +251,12 @@
 
         &--text {
             padding-top: 10px;
-            @media (min-width: 400px) {
-                font-size: 0.8125rem;
-            }
 
             @include _768 {
                 padding-top: 20px;
             }
 
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             line-height: 133%;
 
             color: rgba(0, 0, 0, 0.8);

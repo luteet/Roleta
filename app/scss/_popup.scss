@@ -160,7 +160,7 @@
         font-size: 0.75rem;
         @media (min-width: 600px) {
             padding-top: 25px;
-            font-size: 0.875rem;
+            font-size: 0.9375rem;
         }
         
         & svg {
@@ -183,7 +183,7 @@
     &__min-title {
         text-transform: uppercase;
         font-weight: 700;
-        
+        font-size: 1.25rem;
     }
 
     // .sign-up-popup__list
@@ -220,7 +220,7 @@
             font-size: 0.75rem;
             line-height: 133%;
             @media (min-width: 600px) {
-                font-size: 0.875rem;
+                font-size: 0.9375rem;
                 padding-left: 33px;
             }
             //max-width: 170px;

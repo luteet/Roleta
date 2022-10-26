@@ -86,13 +86,13 @@
             width: 50px; height: 50px;
 
             @include _768 {
-                left: calc(50% - 50px); top: calc(50% - 50px);
-                width: 100px; height: 100px;
+                left: calc(50% - 40px); top: calc(50% - 40px);
+                width: 80px; height: 80px;
             }
             
             @include _992 {
-                left: calc(50% - 75px); top: calc(50% - 75px);
-                width: 150px; height: 150px;
+                left: calc(50% - 52.5px); top: calc(50% - 52.5px);
+                width: 105px; height: 105px;
             }
 
             border-radius: 50%;

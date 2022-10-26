@@ -584,7 +584,6 @@
             }
             
             @include _992 {
-                font-size: 1.125rem;
                 padding: 14px 0;
             }
         }
@@ -603,10 +602,6 @@
                 @include _768 {
                     font-size: 1rem;
                     margin: 10px 0;
-                }
-                
-                @include _992 {
-                    font-size: 1.125rem;
                 }
                 
                 font-size: 0.875rem;

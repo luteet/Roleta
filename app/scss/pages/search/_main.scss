@@ -204,6 +204,31 @@
         padding-right: 40px;
     }
 
+    &__elem-wrapper {
+        position: relative;
+    }
+
+    &__min-btn {
+        width: 38px; min-height: 100%;
+        position: absolute;
+        right: -6px; top: 50%;
+        transform: translate(-100%,-50%);
+        border-radius: 50%;
+
+        transition: background .2s ease-in-out;
+
+        background: transparent;
+
+        &:hover {
+            
+            background: var(--light);
+        }
+
+        &:active {
+            background: var(--light-gray);
+        }
+    }
+
     // .search-filter__input
 
     &__input {

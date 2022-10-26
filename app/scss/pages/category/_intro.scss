@@ -26,6 +26,18 @@
 
     }
 
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__col {
+        flex: 1 1 auto;
+        &:nth-child(2) {
+            flex: 0 1 auto;
+        }
+    }
+
     // .category-intro__page-address
 
     &__page-address {
