@@ -322,18 +322,10 @@ function removeSubActive(subMenu, alt) {
   }
 }
 
-/* let magicGrid = new MagicGrid({
-  container: ".reviews__list",
-  static: true,
-  animate: true,
-  gutter: 30,
-}); */
-
-
 
 let resizeCheck = {}, windowSize;
 
-function resizeCheckFunc(size, minWidth, maxWidth) {
+/* function resizeCheckFunc(size, minWidth, maxWidth) {
   if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
     resizeCheck[String(size)] = false;
     maxWidth(); // < size
@@ -343,7 +335,7 @@ function resizeCheckFunc(size, minWidth, maxWidth) {
     resizeCheck[String(size)] = true;
     minWidth(); // > size
   }
-}
+} */
 
 const hideBlocksWrapper = document.querySelectorAll('.hide-blocks');
 
@@ -383,6 +375,7 @@ const mainLinks = document.querySelectorAll('.header__nav--link'),
       headerNavItems = document.querySelectorAll('.header__nav--item');
 
 mainLinks.forEach(mainLink => {
+
   mainLink.addEventListener('mouseenter', function (event) {
 
       if(windowSize >= 992) {
@@ -406,23 +399,11 @@ mainLinks.forEach(mainLink => {
       }
       
   })
-
-  /* subLink.addEventListener('mouseleave', function (event) {
-
-    if(windowSize >= 992) {
-
-      //console.log('blur')
-      subLink.classList.remove('_hover')
-      //console.log(subLink.getAttribute('href'))
-      removeSubActive(subLink.getAttribute('href'), true)
-
-    }
-    
-  }) */
-
+  
 })
 
 subLinks.forEach(subLink => {
+
   subLink.addEventListener('mouseenter', function (event) {
 
       if(windowSize >= 992) {
@@ -451,15 +432,16 @@ subLinks.forEach(subLink => {
 
 headerNavItems.forEach(headerNavItem => {
   
-  if(windowSize >= 992) {
-    headerNavItem.addEventListener('mouseleave', function (event) {
+  headerNavItem.addEventListener('mouseleave', function (event) {
 
+    if(windowSize >= 992) {
       headerNavItem.querySelectorAll('.header__sub--block').forEach(subBlock => {
         removeSubActive()
       })
-    })
-  }
-  
+    }
+    
+  })
+
 })
 
 const headerContainer = document.querySelector('.header__container');
@@ -472,8 +454,6 @@ function resize() {
   html.style.setProperty('--width-scrollbar', windowSize - body.offsetWidth + 'px');
   html.style.setProperty('--height-screen', window.innerHeight + 'px')
 
-  
-
   mainLinks.forEach(mainLink => {
     
     if((windowSize / 2 - 0) > (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left)) {
@@ -482,7 +462,6 @@ function resize() {
       mainLink.parentElement.classList.add('_reverse');
       mainLink.parentElement.style.setProperty('--x', 0 + 'px');
     }
-    //console.log(headerContainer.offsetWidth + ' ' + (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left) + ' ' + windowSize)
     
   })
 
