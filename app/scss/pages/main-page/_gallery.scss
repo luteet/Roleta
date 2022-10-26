@@ -23,7 +23,10 @@
     // .gallery__title
 
     &__title {
-        padding-top: 20px;
+        padding-top: 10px;
+        @include _768 {
+            padding-top: 20px;
+        }
 
         max-width: 800px;
         margin-inline: auto;

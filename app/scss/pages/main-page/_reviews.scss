@@ -36,7 +36,7 @@
         // .reviews__rating--text
 
         &--text {
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 115%;
             width: 100%;
             text-align: center;
@@ -44,7 +44,6 @@
             @include _768 {
                 text-align: left;
                 width: auto;
-                font-size: 1rem;
             }
             
             @include _992 {
@@ -79,6 +78,7 @@
         // .reviews__rating--logo
 
         &--logo {
+            
         }
 
         // .reviews__rating--min-text
@@ -252,10 +252,12 @@
 
         &--text {
             padding-top: 10px;
+            @media (min-width: 400px) {
+                font-size: 0.8125rem;
+            }
 
             @include _768 {
                 padding-top: 20px;
-                font-size: 0.875rem;
             }
 
             font-size: 0.75rem;

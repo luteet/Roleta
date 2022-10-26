@@ -58,7 +58,7 @@
     // .intro__subtitle
 
     &__subtitle {
-        font-size: 1rem;
+        font-size: 1.125rem;
 
         @include _768 {
             font-size: 1.25rem;
@@ -91,7 +91,7 @@
     &__text {
         padding-top: 10px;
 
-        font-size: 0.875rem;
+        font-size: 1rem;
         line-height: 120%;
 
         @include _768 {

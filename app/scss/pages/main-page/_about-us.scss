@@ -135,7 +135,7 @@
             & span {
                 padding-left: 4px;
                 line-height: 133%;
-                font-size: 0.625rem;
+                font-size: 0.75rem;
 
                 @include _768 {
                     font-size: 0.75rem;
@@ -167,9 +167,10 @@
     // .about-us__text
 
     &__text {
-        padding: 20px 0 0 0;
+        padding: 20px 0 0 15px;
         max-width: 645px;
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
+        line-height: 150%;
         @media (min-width: 400px) {
             font-size: 1rem;
         }

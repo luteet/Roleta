@@ -4,7 +4,7 @@
     font-weight: 800;
     line-height: 115%;
 
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 0;
 
     @include _768 {
@@ -20,6 +20,7 @@
     
     font-family: var(--title-font);
     font-weight: 700;
+    line-height: 133%;
 
     font-size: 1.125rem;
 
@@ -29,10 +30,6 @@
 
     @include _992 {
         font-size: 1.875rem;
-    }
-    
-    &._min {
-
     }
 }
 
@@ -69,7 +66,7 @@
     
     font-family: var(--title-font);
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 115%;
 
     @include _768 {
