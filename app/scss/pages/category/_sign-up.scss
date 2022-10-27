@@ -32,6 +32,10 @@
         // .sign-up__bg--img
 
         &--img {
+            opacity: .5;
+            @include _768 {
+                opacity: .7;
+            }
         }
     }
 }

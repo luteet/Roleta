@@ -165,6 +165,10 @@
             }
             line-height: 133%;
             color: rgba(0, 0, 0, 0.8);
+
+            & p:not(:first-child) {
+                padding-top: 14px;
+            }
         }
     }
 }

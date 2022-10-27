@@ -255,10 +255,7 @@
                 position: relative;
                 padding: 5px 0;
                 line-height: 133%;
-                font-size: 0.75rem;
-                @include _768 {
-                    font-size: 0.875rem;
-                }
+                font-size: 0.875rem;
                 @include _992 {
                     padding: 7.5px 0;
                     font-size: 0.9375rem;
@@ -578,10 +575,7 @@
     &__table {
         text-align: left;
         color: var(--dark-2);
-        font-size: 0.75rem;
-        @include _768 {
-            font-size: 0.875rem;
-        }
+        font-size: 0.875rem;
         
         @include _992 {
             font-size: 0.9375rem;

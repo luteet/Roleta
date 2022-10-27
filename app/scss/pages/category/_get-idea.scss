@@ -12,7 +12,15 @@
         width: 100%;
         flex: 1 1 100%;
 
-        margin-bottom: 64px;
+        margin-bottom: 25px;
+
+        @include _768 {
+            margin-bottom: 45px;
+        }
+        
+        @include _992 {
+            margin-bottom: 64px;
+        }
     }
     
     &__row {
@@ -88,7 +96,6 @@
                 font-size: 1.375rem;
             }
             line-height: 26px;
-            /* identical to box height */
 
             text-transform: uppercase;
             font-feature-settings: 'liga' off;
@@ -97,11 +104,7 @@
         // .get-idea__info-slider--text
 
         &--text {
-            font-size: 0.75rem;
-
-            @include _768 {
-                font-size: 0.875rem;
-            }
+            font-size: 0.875rem;
             
             @include _992 {
                 font-size: 0.9375rem;

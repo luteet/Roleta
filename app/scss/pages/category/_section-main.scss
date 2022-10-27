@@ -21,11 +21,11 @@
 
         grid-column: 1/1; grid-row: 2/2;
 
-        padding-top: 30px;
+        padding-top: 30px; padding-bottom: 30px;
 
         @include _768 {
             padding-right: 30px;
-            padding-top: 0;
+            padding-top: 0; padding-bottom: 0;
 
             grid-column: 1/1; grid-row: 1/1;
         }
@@ -156,7 +156,12 @@
         // .category-main__aside-block--text
 
         &--text {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
+
+            @media (min-width: 360px) {
+                font-size: 0.8125rem;
+            }
+            
             line-height: 133%;
             width: 100%;
 
@@ -192,6 +197,9 @@
             width: 100%;
             font-weight: 700;
             font-size: 0.75rem;
+            @media (min-width: 360px) {
+                font-size: 0.875rem;
+            }
 
             padding-left: 10px;
 
@@ -224,6 +232,12 @@
                 padding-left: 10px;
                 margin: 10px 0;
 
+                font-size: 0.75rem;
+
+                @media (min-width: 360px) {
+                    font-size: 0.8125rem;
+                }
+
                 @include _768 {
                     padding-left: 20px;
                 }
@@ -231,7 +245,7 @@
                 @include _992 {
                     font-size: 0.9375rem;
                 }
-                font-size: 0.75rem;
+                
                 line-height: 133%;
                 font-feature-settings: 'liga' off;
 
@@ -311,7 +325,7 @@
     &__card {
         flex: 0 1 50%;
         width: 50%;
-        padding: 5px;
+        padding: 7.5px 2.5px;
         @include _768 {
             padding: 15px;
         }
@@ -342,14 +356,12 @@
             }
         }
 
-        @media(any-hover) {
-            &--body &--info {
-                opacity: 0; visibility: hidden;
-            }
+        &--body &--info {
+            opacity: 0; visibility: hidden;
+        }
 
-            &--body:hover &--info {
-                opacity: 1; visibility: visible;
-            }
+        &--body:hover &--info {
+            opacity: 1; visibility: visible;
         }
 
         // .category-main__card--labels

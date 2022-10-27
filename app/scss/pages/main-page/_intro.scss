@@ -245,7 +245,9 @@
         // .intro__advantages--text
 
         &--text {
-            font-weight: 500;
+            @include _768 {
+                font-weight: 500;
+            }
             font-size: 0.875rem;
             line-height: 133%;
             color: var(--white);

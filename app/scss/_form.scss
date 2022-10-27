@@ -225,7 +225,6 @@
         font-size: 0.875rem;
     }
     font-weight: 500;
-    text-transform: uppercase;
     line-height: 100%;
     color: rgba(36, 36, 36, 0.4);
 
@@ -249,6 +248,9 @@
     }
 }
 
+.input {
+    text-transform: uppercase;
+}
 
 .ss-main {
     font-weight: 500;

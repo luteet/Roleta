@@ -266,7 +266,11 @@
                 padding-left: 14px;
                 position: relative;
 
-                font-size: 0.75rem;
+                font-size: 0.625rem;
+
+                @media (min-width: 360px) {
+                    font-size: 0.75rem;
+                }
                 
                 @include _992 {
                     font-size: 1rem;

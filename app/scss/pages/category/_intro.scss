@@ -46,6 +46,7 @@
     // .category-intro__title
 
     &__title {
+        
     }
 
     // .category-intro__subtitle
@@ -56,7 +57,15 @@
         }
         display: inline-block;
 
-        font-size: 1.5rem;
+        font-size: 1.125rem;
+
+        @include _768 {
+            font-size: 1.25rem;
+        }
+        
+        @include _992 {
+            font-size: 1.5rem;
+        }
         line-height: 115%;
         font-feature-settings: 'liga' off;
     }
@@ -65,7 +74,7 @@
 
     &__mob-title {
         font-weight: 800;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 26px;
         font-family: "Mont", sans-serif;
         margin: 10px 0 0 0;
@@ -76,9 +85,8 @@
     &__text {
         padding-top: 10px;
 
-        font-family: 'Mont', sans-serif;
-        font-weight: 600;
-        font-size: 0.75rem;
+        //font-family: 'Mont', sans-serif;
+        font-size: 1rem;
         line-height: 115%;
 
         color: rgba(255, 255, 255, 0.7);

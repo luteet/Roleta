@@ -149,7 +149,12 @@
         max-width: 698px;
         line-height: 125%;
 
-        padding-right: 60px;
+        text-align: center;
+
+        @include _768 {
+            padding-right: 60px;
+            text-align: left;
+        }
         
     }
 
@@ -161,6 +166,12 @@
         @media (min-width: 600px) {
             padding-top: 25px;
             font-size: 0.9375rem;
+        }
+
+        text-align: center;
+
+        @include _768 {
+            text-align: left;
         }
         
         & svg {
@@ -184,6 +195,13 @@
         text-transform: uppercase;
         font-weight: 700;
         font-size: 1.25rem;
+        text-align: center;
+        @include _768 {
+            text-align: left;
+            & br {
+                display: none;
+            }
+        }
     }
 
     // .sign-up-popup__list
@@ -217,7 +235,7 @@
         // .sign-up-popup__li--body
 
         &--body {
-            font-size: 0.75rem;
+            font-size: 0.8125rem;
             line-height: 133%;
             @media (min-width: 600px) {
                 font-size: 0.9375rem;
