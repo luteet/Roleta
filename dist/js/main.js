@@ -849,30 +849,7 @@ let productMainSlider = new Swiper('.product-main__slider', {
 
 });
 
-//product-main__gallery-slider
-
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
-
-document.querySelectorAll('.get-idea__gallery-slider--image').forEach(element => {
-  element.addEventListener('click', function (event) {
-    //console.log(event/* .target.closest('.get-idea__gallery-slider--image').parentElement */);
-
-  })
-  
-})
-
-/* 
-// =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-wow = new WOW({
-mobile:       false,
-})
-wow.init();
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-*/
-
 
 function getCoords(elem) {
   var box = elem.getBoundingClientRect();

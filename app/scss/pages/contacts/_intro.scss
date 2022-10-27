@@ -18,14 +18,14 @@
         flex-wrap: wrap;
         align-items: center;
 
-        padding-block: calc(var(--height-header, 50) + 15px) 20px;
+        padding: calc(var(--height-header, 50) + 15px) 0 20px 0;
 
         @include _768 {
-            padding-block: calc(30px + var(--height-header, 50)) 61px;
+            padding: calc(30px + var(--height-header, 50)) 0 61px 0;
         }
         
         @include _992 {
-            padding-block: 105px 91px;
+            padding: 105px 0 91px 0;
         }
     }
 

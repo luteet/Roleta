@@ -193,9 +193,9 @@
     // .header__row
 
     &__row {
-        padding-block: 10px;
+        padding: 10px 0;
         @include _992 {
-            padding-block: 25px;
+            padding: 25px 0;
         }
     }
 
@@ -256,7 +256,7 @@
 
         text-align: center;
 
-        padding-inline: 5px;
+        padding: 0 5px;
 
         // .header__rating--img
 
@@ -274,7 +274,7 @@
         justify-content: center;
 
         margin-right: 20px;
-        padding-inline: 5px;
+        padding: 0 5px;
     }
 
     // .header__btn
@@ -444,7 +444,7 @@
             position: static;
             width: auto; min-height: auto;
             background: transparent;
-            padding-block: 9px;
+            padding: 9px 0;
             overflow-y: visible;
 
             max-height: auto;
@@ -505,7 +505,7 @@
             width: 80%; height: var(--height-screen, 100vh);
             background: var(--white);
 
-            padding-block: 9px;
+            padding: 9px 0;
 
             z-index: 2;
             position: relative;
@@ -513,7 +513,7 @@
             @include _992 {
                 width: 100%; height: auto;
                 overflow-y: visible;
-                padding-block: 0;
+                padding: 0;
             }
         }
 
@@ -734,7 +734,7 @@
             padding: 10px 0;
 
             width: 100%;
-            
+        
             @include _992 {
                 background: var(--white);
 

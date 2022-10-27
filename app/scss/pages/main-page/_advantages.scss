@@ -53,8 +53,7 @@
     // .advantages__text
 
     &__text {
-        padding-top: 15px;
-        padding-inline: 35px;
+        padding: 15px 35px 0 35px;
 
         font-size: 1rem;
         line-height: 120%;
@@ -65,8 +64,7 @@
         @include _768 {
             text-align: left;
             font-size: 1.25rem;
-            padding-top: 25px;
-            padding-inline: 0px;
+            padding: 25px 0 0 0;
         }
     }
 

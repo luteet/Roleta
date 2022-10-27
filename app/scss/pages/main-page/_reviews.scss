@@ -18,10 +18,10 @@
 
     &__rating {
 
-        margin-inline: -15px;
+        margin: 0 -15px;
         max-width: 653px;
         @media (min-width: 600px) {
-            margin-inline: auto;
+            margin: 0 auto;
         }
 
         // .reviews__rating--block

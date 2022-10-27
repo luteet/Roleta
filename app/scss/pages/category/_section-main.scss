@@ -217,12 +217,12 @@
             display: flex;
             flex-direction: column;
 
-            margin-block: -10px;
+            margin: -10px 0;
 
             & li {
                 position: relative;
                 padding-left: 10px;
-                margin-block: 10px;
+                margin: 10px 0;
 
                 @include _768 {
                     padding-left: 20px;
@@ -370,9 +370,9 @@
         // .category-main__card--label
 
         &--label {
-            margin-block: 2.5px;
+            margin: 2.5px 0;
             @include _768 {
-                margin-block: 5px;
+                margin: 5px 0;
                 font-size: 0.875rem;
                 padding: 11px 0 11px 11px;
             }

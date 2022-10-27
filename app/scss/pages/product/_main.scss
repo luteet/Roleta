@@ -126,8 +126,8 @@
             width: 100%;
             
             @include _992 {
-                padding-inline: 15px;
-                margin-inline: -15px;
+                padding: 0 15px;
+                margin: 0 -15px;
             }
 
             overflow: visible;
@@ -253,14 +253,14 @@
 
             & li {
                 position: relative;
-                padding-block: 5px;
+                padding: 5px 0;
                 line-height: 133%;
                 font-size: 0.75rem;
                 @include _768 {
                     font-size: 0.875rem;
                 }
                 @include _992 {
-                    padding-block: 7.5px;
+                    padding: 7.5px 0;
                     font-size: 0.9375rem;
                 }
                 
@@ -355,7 +355,7 @@
                 }
             } 
             & .category-main__aside-block--list li {
-                margin-block: 5px;
+                margin: 5px 0;
             }
         }
 
@@ -605,11 +605,11 @@
         }
 
         & tr > * {
-            padding-block: 10px;
+            padding: 10px 15px 10px 0;
             @include _768 {
-                padding-block: 25px;
+                padding: 25px 15px 25px 0;
             }
-            padding-right: 15px;
+            
         }
 
         & tr:not(:first-child) > * {

@@ -41,6 +41,8 @@
         flex: 0 1 50%;
         padding: 5px;
 
+        min-height: 361px;
+
         @include _768 {
             flex: 0 1 33.333%;
             padding: 10px;
@@ -265,7 +267,7 @@
                 font-size: 0.75rem;
                 
                 @include _992 {
-                    font-size: 0.9375rem;
+                    font-size: 1rem;
                 }
                 line-height: 133%;
 

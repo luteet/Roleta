@@ -15,7 +15,7 @@
         grid-template-columns: 100%;
         counter-reset: faq-number;
 
-        margin-inline: -15px;
+        margin: 0 -15px;
         padding-top: 4px;
 
         @include _768 {
@@ -29,9 +29,7 @@
     }
 
     &__col {
-        padding-inline: 15px;
-
-        
+        padding: 0 15px;
     }
 
     &__col:first-child &__item:first-child {
