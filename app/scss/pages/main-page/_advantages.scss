@@ -86,9 +86,7 @@
 
         display: flex;
         flex-wrap: wrap;
-
         
-
         max-width: 632px;
     }
 
@@ -125,8 +123,13 @@
         // .advantages__item--text
 
         &--text {
-            font-size: 0.875rem;
-            line-height: 133%;
+            font-size: 1rem;
+            line-height: 120%;
+            color: var(--black);
+
+            @include _768 {
+                font-size: 1rem;
+            }
         }
     }
 }

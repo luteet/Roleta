@@ -190,7 +190,11 @@
 
     &__label {
         position: relative;
-        display: inline-block;
+        display: block;
+
+        @include _768 {
+            display: inline-block;
+        }
 
         & svg {
             pointer-events: none;
@@ -211,9 +215,14 @@
     &__min-btn {
         width: 38px; min-height: 100%;
         position: absolute;
-        right: -6px; top: 50%;
-        transform: translate(-100%,-50%);
+        right: 0; top: 50%;
+        transform: translate(0%,-50%);
         border-radius: 50%;
+
+        @include _768 {
+            right: -6px;
+            transform: translate(-100%,-50%);
+        }
 
         transition: background .2s ease-in-out;
 
@@ -232,7 +241,7 @@
     // .search-filter__input
 
     &__input {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 0.875rem;
         line-height: 133%;
         color: var(--dark);

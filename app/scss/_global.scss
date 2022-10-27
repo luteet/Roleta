@@ -147,7 +147,7 @@ body {
 
         @include _768 {
             font-size: 1rem;
-            padding: 29.5px 50.39px;
+            padding: 25px 40px;
         }
     }
 
@@ -183,6 +183,7 @@ body {
     z-index: -1;
     overflow: hidden;
     background: var(--dark);
+    text-align: center;
     /* &::before {
         content: '';
         position: absolute;
@@ -201,12 +202,29 @@ body {
         border-radius: 50%;
         background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
     } */
+
+    &._min {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            background: #484139;
+        }
+    }
     &__img {
         width: 100%; height: 100%;
         object-fit: cover;
         user-select: none;
         -webkit-user-drag: none;
+
+        max-width: var(--max, 100%);
         //opacity: .3;
+    }
+
+    &._top &__img {
+        object-position: top center;
     }
 }
 
@@ -488,7 +506,6 @@ body {
             font-size: 2.25rem;
         }
         line-height: 133%;
-        letter-spacing: -0.06em;
 
         transition: color .2s ease-in-out;
 

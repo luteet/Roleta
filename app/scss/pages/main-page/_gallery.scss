@@ -10,6 +10,18 @@
         padding-top: 102px;
     }
 
+    &.section-padding {
+        padding-top: 15px;
+
+        @include _768 {
+            padding-top: 30px;
+        }
+        
+        @include _992 {
+            padding-top: 40px;
+        }
+    }
+
     // .gallery__container
 
     &__container {

@@ -455,12 +455,15 @@ function resize() {
   html.style.setProperty('--height-screen', window.innerHeight + 'px')
 
   mainLinks.forEach(mainLink => {
+
+    mainLink.parentElement.classList.remove('_reverse')
     
-    if((windowSize / 2 - 0) > (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left)) {
+    if((windowSize / 2 - 50) > (getCoords(mainLink.parentElement).left - getCoords(headerContainer).left)) {
       mainLink.parentElement.style.setProperty('--x', getCoords(mainLink.parentElement).left - getCoords(headerContainer).left + 'px');
     } else {
       mainLink.parentElement.classList.add('_reverse');
-      mainLink.parentElement.style.setProperty('--x', 0 + 'px');
+      mainLink.parentElement.style.setProperty('--x', getCoords(headerContainer).left  + headerContainer.offsetWidth - getCoords(mainLink.parentElement).left - mainLink.parentElement.offsetWidth + 'px');
+      //console.log(getCoords(headerContainer).left + headerContainer.offsetWidth - getCoords(mainLink.parentElement).left);
     }
     
   })

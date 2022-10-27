@@ -349,6 +349,14 @@
         // .product-main__aside--block
 
         &--block {
+            & .category-main__aside-block--list {
+                @include _768 {
+                    margin-top: 10px;
+                }
+            } 
+            & .category-main__aside-block--list li {
+                margin-block: 5px;
+            }
         }
 
         // .product-main__aside--block-body
@@ -517,6 +525,16 @@
             &::after {
                 content: ' »';
                 color: var(--accent);
+            }
+
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: var(--accent);
+            }
+
+            &:active {
+                color: var(--accent-dark);
             }
         }
 

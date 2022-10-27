@@ -54,6 +54,7 @@
         text-align: center;
         @include _768 {
             text-align: left;
+            margin-top: -15px;
         }
     }
 

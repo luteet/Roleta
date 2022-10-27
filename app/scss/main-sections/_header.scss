@@ -698,6 +698,9 @@
 
     &__nav--item._reverse &__sub {
         flex-direction: row-reverse;
+        @include _992 {
+            right: var(--x,0); left: auto;
+        }
     }
 
     &__sub {
@@ -840,6 +843,10 @@
 
         @include _992 {
             padding: 15px;
+        }
+
+        &--block {
+            flex: 1 1 auto;
         }
 
         // .header__sub-link--header

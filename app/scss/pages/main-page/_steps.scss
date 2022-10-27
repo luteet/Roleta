@@ -148,13 +148,7 @@
         // .steps__card--main
 
         &--main {
-            padding-top: 20px;
-            @include _768 {
-                padding-top: 40px;
-            }
-            @include _992 {
-                padding-top: 65px;
-            }
+            padding-top: 15px;
             flex: 1 1 auto;
 
             display: flex;
@@ -170,9 +164,22 @@
 
         &--base-info {
             & a {
-                
                 @include _768 {
                     margin-top: 12px;
+                }
+            }
+
+            &.base-info._min .base-info__shedule {
+                display: flex;
+                @include _768 {
+                    padding-left: 5px;
+                }
+                &::before {
+                    @include _768 {
+                        margin-top: 6px;
+                        margin-right: 10px;
+                        flex: 0 0 6px;
+                    }
                 }
             }
         }
@@ -188,6 +195,8 @@
             color: rgba(255, 255, 255, 0.5);
 
             position: relative;
+
+            margin-right: 12.5px;
 
             &::before, &::after {
                 content: '';
