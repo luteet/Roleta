@@ -39,18 +39,20 @@
     &__card {
 
         flex: 0 1 50%;
+        width: 50%;
         padding: 5px;
-
-        min-height: 361px;
 
         @include _768 {
             flex: 0 1 33.333%;
+            width: 33.333%;
             padding: 10px;
+            min-height: 361px;
         }
         
         @include _992 {
             padding: 15px;
             flex: 0 1 25%;
+            width: auto;
         }
 
         
