@@ -5736,7 +5736,7 @@ body._blur .footer,body._blur .main,body._blur-all .footer,body._blur-all .heade
     }
 
     .steps__card--base-info.base-info._min .base-info__shedule {
-        padding-left: 5px
+        padding-left: 8px
     }
 
     .steps__card--base-info.base-info._min .base-info__shedule::before {
