@@ -1,6 +1,5 @@
 .footer {
 
-    
     padding-top: 28px;
 
     @include _768 {
@@ -147,7 +146,7 @@
 
         // .footer__nav--link
 
-        &--link {
+        &--item a {
             font-size: 0.875rem;
             @include _768 {
                 font-size: 0.8125rem;

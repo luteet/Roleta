@@ -1840,7 +1840,7 @@
                 <div class="search-header__page-address page-address">
                     <ul class="page-address__list">
                         <li class="page-address__item">
-                            <a class="page-address__link">
+                            <a>
                                 Titulinis
                             </a>
                         </li>
@@ -1850,7 +1850,7 @@
                             </svg>
                         </li>
                         <li class="page-address__item">
-                            <a href="#" class="page-address__link">
+                            <a href="#">
                                 Roletai
                             </a>
                         </li>
@@ -1871,16 +1871,19 @@
                                     PASIRINKITE AUDINĮ
                                 </span>
                                 <select name="select-1" class="search-filter__select custom-select">
-                                    <option value="value-1">
+                                    <option disabled selected>
+                                        Pasirinkite parinktį
+                                    </option>
+                                    <option value="value-1" data-filter="category-1">
                                         Diena-naktis roletų audiniai
                                     </option>
-                                    <option value="value-2">
+                                    <option value="value-2" data-filter="category-2">
                                         Klasikinių roletų audiniai
                                     </option>
-                                    <option value="value-3">
+                                    <option value="value-3" data-filter="category-3">
                                         Fasado roletų audiniai
                                     </option>
-                                    <option value="value-4">
+                                    <option value="value-4" data-filter="category-4">
                                         Stoglangių roletų audiniai
                                     </option>
                                 </select>
@@ -1890,16 +1893,19 @@
                                     Pasirinkite spalvą
                                 </span>
                                 <select name="select-2" class="search-filter__select custom-select">
-                                    <option value="value-1">
+                                    <option disabled selected>
+                                        Pasirinkite parinktį
+                                    </option>
+                                    <option value="value-1" data-filter="category-5">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-2">
+                                    <option value="value-2" data-filter="category-6">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-3">
+                                    <option value="value-3" data-filter="category-7">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-4">
+                                    <option value="value-4" data-filter="category-8">
                                         Pasirinkite spalvą
                                     </option>
                                 </select>
@@ -1910,7 +1916,7 @@
                                 </span>
                                 <div class="search-filter__elem-wrapper">
                                     <label class="search-filter__label _icon-active">
-                                        <input type="search" name="search" placeholder="Paieška" class="search-filter__input">
+                                        <input type="search" name="search" id="search-input" placeholder="Paieška" class="search-filter__input">
                                     </label>
                                     <button class="search-filter__min-btn" type="submit" title="Paieška">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1924,7 +1930,7 @@
                 </form>
                 <div class="search-main__result">
                     <ul class="search-main__result--list">
-                        <li class="search-main__result--item">
+                        <li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1933,10 +1939,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1945,10 +1952,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1957,10 +1965,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1969,10 +1978,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1981,10 +1991,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-1">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -1993,10 +2004,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-1 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-2">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2005,10 +2017,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-2 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-2">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2017,10 +2030,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-2 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-2">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2029,10 +2043,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-2 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-3">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2041,10 +2056,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-3 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-3">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2053,10 +2069,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-3 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-3">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2065,10 +2082,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-3 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-4">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2077,10 +2095,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-4 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-4">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2089,10 +2108,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-4 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-4">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2101,10 +2121,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-4 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-5">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2113,10 +2134,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-5 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-5">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2125,10 +2147,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-5 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-5">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2137,10 +2160,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-5 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-6">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2149,10 +2173,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-6 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-6">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2161,10 +2186,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-6 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-6">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2173,10 +2199,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-6 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-7">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2185,10 +2212,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-7 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-7">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2197,10 +2225,11 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-7 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
-</li><li class="search-main__result--item">
+</li><li class="search-main__result--item" data-category="category-7">
     <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
         <div class="search-main__result--image">
             <picture>
@@ -2209,7 +2238,47 @@
             </picture>
         </div>
         <div class="search-main__result--text">
-            ZEBRA HORIZON BASALT BH-1406 2.6m [78]
+            category-7 <br>
+            BH-1406 2.6m [78]
+        </div>
+    </a>
+</li><li class="search-main__result--item" data-category="category-8">
+    <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
+        <div class="search-main__result--image">
+            <picture>
+                <source srcset="img/product/fabrics/1.webp" type="image/webp">
+                <img src="img/product/fabrics/1.jpg" alt="" width="150" height="150" loading="lazy" class="search-main__result--img">
+            </picture>
+        </div>
+        <div class="search-main__result--text">
+            category-8 <br>
+            BH-1406 2.6m [78]
+        </div>
+    </a>
+</li><li class="search-main__result--item" data-category="category-8">
+    <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
+        <div class="search-main__result--image">
+            <picture>
+                <source srcset="img/product/fabrics/1.webp" type="image/webp">
+                <img src="img/product/fabrics/1.jpg" alt="" width="150" height="150" loading="lazy" class="search-main__result--img">
+            </picture>
+        </div>
+        <div class="search-main__result--text">
+            category-8 <br>
+            BH-1406 2.6m [78]
+        </div>
+    </a>
+</li><li class="search-main__result--item" data-category="category-8">
+    <a href="img/product/fabrics/1.jpg" class="search-main__result--block" data-fslightbox="gallery" data-alt="ZEBRA HORIZON BASALT BH-1406 2.6m [78]" title="ZEBRA HORIZON BASALT BH-1406 2.6m [78]">
+        <div class="search-main__result--image">
+            <picture>
+                <source srcset="img/product/fabrics/1.webp" type="image/webp">
+                <img src="img/product/fabrics/1.jpg" alt="" width="150" height="150" loading="lazy" class="search-main__result--img">
+            </picture>
+        </div>
+        <div class="search-main__result--text">
+            category-8 <br>
+            BH-1406 2.6m [78]
         </div>
     </a>
 </li>
@@ -2298,37 +2367,37 @@
                     </h3>
                     <ul class="footer__nav--list">
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Pagrindinis
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Apie mus
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Atsiliepimai
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Galerija
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 DUK
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Kaip užsakyti?
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Kontaktai
                             </a>
                         </li>
@@ -2340,32 +2409,32 @@
                     </h3>
                     <ul class="footer__nav--list">
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Roletai, žaliuzės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Romanetės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Užuolaidos
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Tinkleliai nuo vabzdžių
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Apsauginės žaliuzės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Markizės
                             </a>
                         </li>
@@ -2377,47 +2446,47 @@
                     </h3>
                     <ul class="footer__nav--list">
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Kasetinai roletai
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Roletai diena naktis
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Roletai nuo saulės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Blackout roletai
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Medinės žaliuzės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Plisuotos žaliuzės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Horizontalios žaliuzės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Romanetės
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link">
+                            <a href="#">
                                 Tinkleliai rėmeliai
                             </a>
                         </li>

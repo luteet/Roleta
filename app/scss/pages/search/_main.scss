@@ -58,13 +58,26 @@
                 flex: 0 1 16.6667%;
                 padding: 15px;
             }
+
+            overflow: hidden;
+
+            &._hidden {
+                display: none;
+            }
+
+            /* transition: width .5s ease-in-out, height .5s ease-in-out, opacity .2s ease-in-out, visibility .2s ease-in-out, padding .5s ease-in-out;
+            width: var(--width, auto); height: var(--height, auto);
+            &._hidden {
+                width: 0; height: 0; padding: 0;
+                opacity: 0; visibility: hidden;
+            } */
            
         }
 
         // .search-main__result--block
 
         &--block {
-            display: inline-block;
+            display: block;
         }
 
         // .search-main__result--image

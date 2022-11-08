@@ -500,19 +500,25 @@ body.addEventListener('click', function (event) {
     // =-=-=-=-=-=-=-=-=-=- <toggle header menu> -=-=-=-=-=-=-=-=-=-=-
     
     if (thisTarget.closest('.header__burger')) {
-        menu.forEach(element => {
-            element.classList.toggle('_active')
-        })
-        setTimeout(() => {
-          body.classList.toggle('_blur');
-        },200)
+
+      menu.forEach(element => {
+          element.classList.toggle('_active')
+      })
+      
+      setTimeout(() => {
+        body.classList.toggle('_blur');
+      },200)
+
     } else if($('.header__nav--bg')) {
+      
       menu.forEach(element => {
         element.classList.remove('_active')
       })
+
       setTimeout(() => {
         body.classList.remove('_blur');
       },200)
+
     }
     
     // =-=-=-=-=-=-=-=-=-=- </toggle header menu> -=-=-=-=-=-=-=-=-=-=-
@@ -525,7 +531,7 @@ body.addEventListener('click', function (event) {
     if (headerNavLink) {
 
       if(windowSize >= 992) {
-
+        console.log(headerNavLink.classList.contains('_active'))
         if(!headerNavLink.classList.contains('_active')) {
 
           if(headerNavLink.classList.contains('_has-sub-menu')) {
@@ -538,12 +544,14 @@ body.addEventListener('click', function (event) {
             headerNavLink.classList.add('_active');
           }
   
-        } else {
+        }/*  else {
+          
+          if(headerNavLink.classList.contains('_has-sub-menu')) {
+            event.preventDefault();
+            removeSubActive()
+          }
   
-          event.preventDefault();
-          removeSubActive()
-  
-        }
+        } */
 
       } else {
 
@@ -615,13 +623,13 @@ body.addEventListener('click', function (event) {
 
         } else {
 
-          event.preventDefault();
+          /* event.preventDefault();
           if(headerSubLink.classList.contains('_has-sub-menu')) {
             removeSubActive({
               subMenu: headerSubLink.getAttribute('href'),
             });
             headerSubLink.classList.remove('_active');
-          }
+          } */
 
         }
 
@@ -900,13 +908,107 @@ if(fsLightboxInstances['gallery']) {
   };
 }
 
+function searchFilter(filterData) {
 
-document.querySelectorAll('.custom-select').forEach(customSelect => {
-  new SlimSelect({
-    select: customSelect,
-    showSearch: false
+  const items = document.querySelectorAll('.search-main__result--item');
+
+  function filterCheck(item) {
+    let check = false;
+    if(filterData.length > 0) {
+      for(let index = 0; index < filterData.length; index++) {
+        if(item.dataset.category == filterData[index]) {
+          check = true;
+        }
+      }
+    } else {
+      check = true;
+    }
+    
+    return check;
+  }
+  
+  items.forEach(item => {
+    if(!filterCheck(item)) {
+      item.classList.add('_hidden')
+    } else {
+      item.classList.remove('_hidden')
+    }
   })
-})
+
+}
+
+if(document.querySelector('.custom-select')) {
+
+  let filterData, filterSelectOptions = [];
+
+  filterData = [];
+  document.querySelectorAll('.custom-select').forEach(customSelect => {
+    const options = customSelect.querySelectorAll('option');
+
+    options.forEach(option => {
+      filterSelectOptions.push(option);
+    })
+
+  });
+
+  function setFilterData() {
+    filterData = [];
+    for(let index = 0; index < filterSelectOptions.length; index++) {
+
+      if(filterSelectOptions[index].selected && !filterSelectOptions[index].disabled) {
+
+        filterData.push(filterSelectOptions[index].dataset.filter)
+
+      }
+    }
+  }
+
+  setFilterData()
+
+  document.querySelectorAll('.custom-select').forEach(customSelect => {
+
+    new SlimSelect({
+      select: customSelect,
+      showSearch: false,
+      onChange: function () {
+
+        setFilterData();
+        searchFilter(filterData)
+
+      }
+    })
+
+  })
+
+
+
+  searchFilter(filterData)
+
+
+  /* const searchInput = document.querySelector('#search-input')
+
+  function search() {
+    console.log('search')
+    let filter = searchInput.value.toUpperCase();
+    let items = document.querySelectorAll('.search-main__result--item');
+ 
+    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+    for (let index = 0; index < items.length; index++) {
+        let text = items[index].querySelector('.search-main__result--text');
+        console.log(text.textContent.toUpperCase().indexOf(filter))
+        if (text.textContent.toUpperCase().indexOf(filter) <= -1) {
+          items[index].classList.add('_hidden');
+        } else {
+          items[index].classList.remove('_hidden');
+        }
+    }
+  }
+
+  searchInput.addEventListener('keyup', function() {
+    search()
+  }) */
+
+}
 
 const cardLabels = document.querySelectorAll('.category-main__card--label');
 

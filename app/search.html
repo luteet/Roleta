@@ -12,7 +12,7 @@
                 <div class="search-header__page-address page-address">
                     <ul class="page-address__list">
                         <li class="page-address__item">
-                            <a class="page-address__link">
+                            <a>
                                 Titulinis
                             </a>
                         </li>
@@ -22,7 +22,7 @@
                             </svg>
                         </li>
                         <li class="page-address__item">
-                            <a href="#" class="page-address__link">
+                            <a href="#">
                                 Roletai
                             </a>
                         </li>
@@ -43,16 +43,19 @@
                                     PASIRINKITE AUDINĮ
                                 </span>
                                 <select name="select-1" class="search-filter__select custom-select">
-                                    <option value="value-1">
+                                    <option disabled selected>
+                                        Pasirinkite parinktį
+                                    </option>
+                                    <option value="value-1" data-filter="category-1">
                                         Diena-naktis roletų audiniai
                                     </option>
-                                    <option value="value-2">
+                                    <option value="value-2" data-filter="category-2">
                                         Klasikinių roletų audiniai
                                     </option>
-                                    <option value="value-3">
+                                    <option value="value-3" data-filter="category-3">
                                         Fasado roletų audiniai
                                     </option>
-                                    <option value="value-4">
+                                    <option value="value-4" data-filter="category-4">
                                         Stoglangių roletų audiniai
                                     </option>
                                 </select>
@@ -62,16 +65,19 @@
                                     Pasirinkite spalvą
                                 </span>
                                 <select name="select-2" class="search-filter__select custom-select">
-                                    <option value="value-1">
+                                    <option disabled selected>
+                                        Pasirinkite parinktį
+                                    </option>
+                                    <option value="value-1" data-filter="category-5">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-2">
+                                    <option value="value-2" data-filter="category-6">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-3">
+                                    <option value="value-3" data-filter="category-7">
                                         Pasirinkite spalvą
                                     </option>
-                                    <option value="value-4">
+                                    <option value="value-4" data-filter="category-8">
                                         Pasirinkite spalvą
                                     </option>
                                 </select>
@@ -82,7 +88,7 @@
                                 </span>
                                 <div class="search-filter__elem-wrapper">
                                     <label class="search-filter__label _icon-active">
-                                        <input type="search" name="search" placeholder="Paieška" class="search-filter__input">
+                                        <input type="search" name="search" id="search-input" placeholder="Paieška" class="search-filter__input">
                                     </label>
                                     <button class="search-filter__min-btn" type="submit" title="Paieška">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,33 +103,37 @@
                 <div class="search-main__result">
                     <ul class="search-main__result--list">
                         @@loop("html/search/_result-item.html", [
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
+                            {"category": 'category-1'},
+                            {"category": 'category-1'},
+                            {"category": 'category-1'},
+                            {"category": 'category-1'},
+                            {"category": 'category-1'},
+                            {"category": 'category-1'},
 
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
+                            {"category": 'category-2'},
+                            {"category": 'category-2'},
+                            {"category": 'category-2'},
+                            {"category": 'category-3'},
+                            {"category": 'category-3'},
+                            {"category": 'category-3'},
 
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
+                            {"category": 'category-4'},
+                            {"category": 'category-4'},
+                            {"category": 'category-4'},
+                            {"category": 'category-5'},
+                            {"category": 'category-5'},
+                            {"category": 'category-5'},
 
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
-                            {},
+                            {"category": 'category-6'},
+                            {"category": 'category-6'},
+                            {"category": 'category-6'},
+                            {"category": 'category-7'},
+                            {"category": 'category-7'},
+                            {"category": 'category-7'},
+
+                            {"category": 'category-8'},
+                            {"category": 'category-8'},
+                            {"category": 'category-8'},
                         ])
                     </ul>
                 </div>
