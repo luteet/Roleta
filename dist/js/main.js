@@ -312,6 +312,7 @@ function removeSubActive(subMenu, alt) {
     }
     
   } else {
+    console.log(subMenu)
     document.querySelector(subMenu).classList.remove('_active');
 
     if(alt) {
@@ -384,14 +385,18 @@ mainLinks.forEach(mainLink => {
 
           if(mainLink.classList.contains('_has-sub-menu')) {
 
-            removeSubActive()
-            if(document.querySelector('.header__nav--link._hover')) {
-              document.querySelector('.header__nav--link._hover').classList.remove('_hover')
-            }
-    
-            const headerSubBlock = document.querySelector(mainLink.getAttribute('href'));
-            headerSubBlock.classList.add('_active');
-            mainLink.classList.add('_hover');
+            setTimeout(() => {
+
+              removeSubActive()
+              if(document.querySelector('.header__nav--link._hover')) {
+                document.querySelector('.header__nav--link._hover').classList.remove('_hover')
+              }
+      
+              const headerSubBlock = document.querySelector(mainLink.dataset.href);
+              headerSubBlock.classList.add('_active');
+              mainLink.classList.add('_hover');
+
+            },0)
           }
 
         }
@@ -412,14 +417,18 @@ subLinks.forEach(subLink => {
 
           if(subLink.classList.contains('_has-sub-menu')) {
 
-            if(document.querySelector('.header__sub--link._hover')) {
-              removeSubActive(document.querySelector('.header__sub--link._hover').getAttribute('href'), true)
-              document.querySelector('.header__sub--link._hover').classList.remove('_hover')
-            }
-    
-            const headerSubBlock = document.querySelector(subLink.getAttribute('href'));
-            headerSubBlock.classList.add('_active');
-            subLink.classList.add('_hover');
+            setTimeout(() => {
+
+              if(document.querySelector('.header__sub--link._hover')) {
+                removeSubActive(document.querySelector('.header__sub--link._hover').dataset.href, true)
+                document.querySelector('.header__sub--link._hover').classList.remove('_hover')
+              }
+      
+              const headerSubBlock = document.querySelector(subLink.dataset.href);
+              headerSubBlock.classList.add('_active');
+              subLink.classList.add('_hover');
+
+            },0)
           }
 
         }
@@ -531,15 +540,16 @@ body.addEventListener('click', function (event) {
     if (headerNavLink) {
 
       if(windowSize >= 992) {
-        console.log(headerNavLink.classList.contains('_active'))
-        if(!headerNavLink.classList.contains('_active')) {
+
+        //console.log()
+        if(!headerNavLink.classList.contains('_active') && !headerNavLink.classList.contains('_hover')) {
 
           if(headerNavLink.classList.contains('_has-sub-menu')) {
             event.preventDefault();
   
             removeSubActive()
     
-            const headerSubBlock = document.querySelector(headerNavLink.getAttribute('href'));
+            const headerSubBlock = document.querySelector(headerNavLink.dataset.href);
             headerSubBlock.classList.add('_active');
             headerNavLink.classList.add('_active');
           }
@@ -607,16 +617,16 @@ body.addEventListener('click', function (event) {
 
       if(windowSize >= 992) {
         
-        if(!headerSubLink.classList.contains('_active')) {
+        if(!headerSubLink.classList.contains('_active') && !headerSubLink.classList.contains('_hover')) {
 
           if(headerSubLink.classList.contains('_has-sub-menu')) {
             event.preventDefault();
 
             if(document.querySelector('.header__sub--link._active')) {
-              removeSubActive(document.querySelector('.header__sub--link._active').getAttribute('href'), true)
+              removeSubActive(document.querySelector('.header__sub--link._active').dataset.href, true)
             }
     
-            const headerSubBlock = document.querySelector(headerSubLink.getAttribute('href'));
+            const headerSubBlock = document.querySelector(headerSubLink.dataset.href);
             headerSubBlock.classList.add('_active');
             headerSubLink.classList.add('_active');
           }
