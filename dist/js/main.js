@@ -312,7 +312,6 @@ function removeSubActive(subMenu, alt) {
     }
     
   } else {
-    console.log(subMenu)
     document.querySelector(subMenu).classList.remove('_active');
 
     if(alt) {
@@ -472,7 +471,6 @@ function resize() {
     } else {
       mainLink.parentElement.classList.add('_reverse');
       mainLink.parentElement.style.setProperty('--x', getCoords(headerContainer).left  + headerContainer.offsetWidth - getCoords(mainLink.parentElement).left - mainLink.parentElement.offsetWidth + 'px');
-      //console.log(getCoords(headerContainer).left + headerContainer.offsetWidth - getCoords(mainLink.parentElement).left);
     }
     
   })
@@ -541,7 +539,6 @@ body.addEventListener('click', function (event) {
 
       if(windowSize >= 992) {
 
-        //console.log()
         if(!headerNavLink.classList.contains('_active') && !headerNavLink.classList.contains('_hover')) {
 
           if(headerNavLink.classList.contains('_has-sub-menu')) {
@@ -735,9 +732,7 @@ body.addEventListener('click', function (event) {
               container = document.querySelector(id),
               length = Number(container.dataset.hideBlocksLength);
   
-        container.dataset.hideBlocksLength = ((length - 6) > 0) ? length - 6 : 0;
-
-        //console.log((length - 6))
+        container.dataset.hideBlocksLength = ((length - 6) > 0) ? length - 6 : 0
   
         setTimeout(() => {
           hideBlocks()
@@ -918,40 +913,136 @@ if(fsLightboxInstances['gallery']) {
   };
 }
 
+const notFound = document.querySelector('.search-main__result--not-found');
+
+let filterData = {
+  color: '',
+  type: '',
+};
+
 function searchFilter(filterData) {
 
-  const items = document.querySelectorAll('.search-main__result--item');
+  const items = (document.querySelector('.search-main__result--item._search-filtered')) ? document.querySelectorAll('.search-main__result--item._search-filtered') : document.querySelectorAll('.search-main__result--item');
 
   function filterCheck(item) {
-    let check = false;
-    if(filterData.length > 0) {
-      for(let index = 0; index < filterData.length; index++) {
-        if(item.dataset.category == filterData[index]) {
-          check = true;
+    let check = false, count = [0,0];
+    if(Object.keys(filterData).length > 0) {
+
+      if(filterData['color']) {
+        count[0] = count[0]+1;
+        if(filterData['color'] == item.dataset.color) {
+          count[1] = count[1]+1;
         }
       }
+
+      if(filterData['type']) {
+        count[0] = count[0]+1;
+        if(filterData['type'] == item.dataset.type) {
+          //check = true;
+          count[1] = count[1]+1;
+        }
+      }
+
+      if(count[0] == count[1]) {
+        check = true;
+      }
+
     } else {
       check = true;
     }
     
     return check;
   }
+
+  let foundCheck = false;
   
   items.forEach(item => {
+    
     if(!filterCheck(item)) {
       item.classList.add('_hidden')
+      item.classList.remove('_filtered')
     } else {
+      foundCheck = true;
       item.classList.remove('_hidden')
+      item.classList.add('_filtered')
     }
   })
 
+  if(!foundCheck && notFound) {
+    notFound.classList.remove('_hidden');
+  } else {
+    notFound.classList.add('_hidden');
+  }
+
+
 }
+
+function search() {
+    
+  let filter = searchInput.value.toUpperCase(),
+      items = (document.querySelector('.search-main__result--item._filtered')) ? document.querySelectorAll('.search-main__result--item._filtered') : document.querySelectorAll('.search-main__result--item'),
+      foundCheck = false;
+  
+  for (let index = 0; index < items.length; index++) {
+      let text = items[index].querySelector('.search-main__result--text'),
+          count = [0,0];
+
+      if (text.textContent.toUpperCase().indexOf(filter) <= -1) {
+        items[index].classList.add('_hidden');
+        if(filter) {
+          items[index].classList.remove('_search-filtered')
+        }
+      } else {
+
+        if(filterData['color']) {
+          count[0] = count[0]+1;
+          if(filterData['color'] == items[index].dataset.color) {
+            count[1] = count[1]+1;
+          }
+        }
+  
+        if(filterData['type']) {
+          count[0] = count[0]+1;
+          if(filterData['type'] == items[index].dataset.type) {
+            count[1] = count[1]+1;
+          }
+        }
+
+        if(count[0] == count[1]) {
+          items[index].classList.remove('_hidden');
+
+          if(filter) {
+            items[index].classList.add('_search-filtered')
+          }
+          
+          if(!foundCheck) foundCheck = true;
+        }
+        
+      }
+  }
+
+  if(!foundCheck && notFound) {
+    notFound.classList.remove('_hidden')
+  } else if(foundCheck && notFound) {
+    notFound.classList.add('_hidden')
+  }
+  
+}
+
+const searchInput = document.querySelector('#search-input');
+
+if(searchInput) {
+  searchInput.addEventListener('input', function() {
+    search()
+  })
+  search()
+}
+
 
 if(document.querySelector('.custom-select')) {
 
-  let filterData, filterSelectOptions = [];
+  let filterSelectOptions = [];
 
-  filterData = [];
   document.querySelectorAll('.custom-select').forEach(customSelect => {
     const options = customSelect.querySelectorAll('option');
 
@@ -962,12 +1053,18 @@ if(document.querySelector('.custom-select')) {
   });
 
   function setFilterData() {
-    filterData = [];
+    filterData = {
+      color: '',
+      type: '',
+    };
+
     for(let index = 0; index < filterSelectOptions.length; index++) {
 
       if(filterSelectOptions[index].selected && !filterSelectOptions[index].disabled) {
 
-        filterData.push(filterSelectOptions[index].dataset.filter)
+        //filterData.push(filterSelectOptions[index].dataset.filter)
+        if(filterSelectOptions[index].dataset.filterColor) filterData['color'] = filterSelectOptions[index].dataset.filterColor;
+        if(filterSelectOptions[index].dataset.filterType) filterData['type'] = filterSelectOptions[index].dataset.filterType;
 
       }
     }
@@ -984,39 +1081,17 @@ if(document.querySelector('.custom-select')) {
 
         setFilterData();
         searchFilter(filterData)
+        search();
+        
 
       }
     })
 
   })
 
-
-
   searchFilter(filterData)
 
-
-  /* const searchInput = document.querySelector('#search-input')
-
-  function search() {
-    console.log('search')
-    let filter = searchInput.value.toUpperCase();
-    let items = document.querySelectorAll('.search-main__result--item');
- 
-    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
-    for (let index = 0; index < items.length; index++) {
-        let text = items[index].querySelector('.search-main__result--text');
-        console.log(text.textContent.toUpperCase().indexOf(filter))
-        if (text.textContent.toUpperCase().indexOf(filter) <= -1) {
-          items[index].classList.add('_hidden');
-        } else {
-          items[index].classList.remove('_hidden');
-        }
-    }
-  }
-
-  searchInput.addEventListener('keyup', function() {
-    search()
-  }) */
+  //searchInput.addEventListener('change')
 
 }
 

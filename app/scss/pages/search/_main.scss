@@ -74,6 +74,15 @@
            
         }
 
+        &--not-found {
+            text-align: center;
+            padding-top: 50px;
+            font-size: 1.125rem;
+            &._hidden {
+                display: none;
+            }
+        }
+
         // .search-main__result--block
 
         &--block {
@@ -208,7 +217,7 @@
         & svg {
             pointer-events: none;
             position: absolute;
-            right: 12px; top: 50%;
+            right: 17px; top: 50%;
             transform: translate(0,-50%);
         }
     }
