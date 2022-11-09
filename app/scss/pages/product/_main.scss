@@ -243,10 +243,14 @@
         }
 
         & ul {
-            padding-top: 10px;
+            padding-top: 10px; 
             
             @include _992 {
                 padding-top: 22.5px;
+            }
+
+            @media (min-width: #{$container}px) {
+                padding-bottom: 10%;
             }
 
             & li {
@@ -271,7 +275,7 @@
 
     &__base-info {
 
-        margin-top: 30px;
+        margin-top: 10%;
 
         background: var(--light);
         border-radius: 20px;

@@ -587,16 +587,7 @@ body {
 
     &__item a {
         color: var(--white);
-        font-size: 0.875rem;
         line-height: 115%;
-
-        @include _768 {
-            font-size: 1rem;
-        }
-        
-        @include _992 {
-            font-size: 1.125rem;
-        }
     }
 }
 

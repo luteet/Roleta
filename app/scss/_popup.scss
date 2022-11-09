@@ -47,7 +47,7 @@
     &-scroll-box {
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: calc(100vh - 30px);
+        max-height: calc(var(--height-screen, 100vh) - 30px);
         width: 100%;
 
         padding: 30px 15px;
