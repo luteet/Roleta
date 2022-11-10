@@ -1033,14 +1033,10 @@ if(document.querySelector('.custom-select')) {
       type: '',
     };
 
-    console.log(filterSelectOptions)
-
     for(let index = 0; index < filterSelectOptions.length; index++) {
       
-
       if(filterSelectOptions[index].selected && !filterSelectOptions[index].disabled) {
 
-        //filterData.push(filterSelectOptions[index].dataset.filter)
         if(filterSelectOptions[index].dataset.filterColor) filterData['color'] = filterSelectOptions[index].dataset.filterColor;
         if(filterSelectOptions[index].dataset.filterType) filterData['type'] = filterSelectOptions[index].dataset.filterType;
 
