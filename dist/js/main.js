@@ -1016,7 +1016,7 @@ if(searchInput) {
 
 if(document.querySelector('.custom-select')) {
 
-  let filterSelectOptions = [];
+  var filterSelectOptions = [];
 
   document.querySelectorAll('.custom-select').forEach(customSelect => {
     const options = customSelect.querySelectorAll('option');
@@ -1033,8 +1033,10 @@ if(document.querySelector('.custom-select')) {
       type: '',
     };
 
+    console.log(filterSelectOptions)
+
     for(let index = 0; index < filterSelectOptions.length; index++) {
-      console.log(filterSelectOptions)
+      
 
       if(filterSelectOptions[index].selected && !filterSelectOptions[index].disabled) {
 
