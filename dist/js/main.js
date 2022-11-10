@@ -1034,6 +1034,7 @@ if(document.querySelector('.custom-select')) {
     };
 
     for(let index = 0; index < filterSelectOptions.length; index++) {
+      console.log(filterSelectOptions)
 
       if(filterSelectOptions[index].selected && !filterSelectOptions[index].disabled) {
 
@@ -1045,7 +1046,9 @@ if(document.querySelector('.custom-select')) {
     }
   }
 
-  setFilterData()
+  setTimeout(() => {
+    setFilterData()
+  },0)
 
   document.querySelectorAll('.custom-select').forEach(customSelect => {
 
