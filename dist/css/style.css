@@ -2181,10 +2181,6 @@ body._blur .footer,body._blur .main,body._blur-all .footer,body._blur-all .heade
     opacity: 0
 }
 
-.input {
-    text-transform: uppercase
-}
-
 .ss-main {
     font-weight: 500;
     font-size: .875rem;
