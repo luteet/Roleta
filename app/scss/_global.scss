@@ -13,6 +13,7 @@ body {
     
     font-weight: 400;
     line-height: 150%;
+    letter-spacing: 0.005em;
 
     display: flex;
     flex-direction: column;
@@ -577,12 +578,13 @@ body {
         align-items: center;
 
         margin: -5px;
+        padding-bottom: 15px;
     }
 
     // .page-address__item
 
     &__item {
-        padding: 5px;
+        padding: 0 5px;
     }
 
     &__item a {
