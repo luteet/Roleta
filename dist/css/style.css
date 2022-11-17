@@ -4212,10 +4212,6 @@ body._blur .footer,body._blur .main,body._blur-all .footer,body._blur-all .heade
     color: var(--black)
 }
 
-.product-main__info,.reasons__card--text {
-    color: var(--dark-2)
-}
-
 .category-main__card--link>* {
     font-weight: 500
 }
@@ -4333,6 +4329,10 @@ body._blur .footer,body._blur .main,body._blur-all .footer,body._blur-all .heade
 .reasons__card--title {
     font-weight: 700;
     text-transform: uppercase
+}
+
+.reasons__card--text {
+    color: var(--dark-2)
 }
 
 .get-idea__title {
@@ -4809,7 +4809,9 @@ body._blur .footer,body._blur .main,body._blur-all .footer,body._blur-all .heade
 }
 
 .product-main__info {
-    padding-top: 30px
+    padding-top: 30px;
+    flex: 1 1 auto;
+    color: var(--dark-2)
 }
 
 .product-main__info h2 {

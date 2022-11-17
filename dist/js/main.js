@@ -1058,7 +1058,6 @@ if(document.querySelector('.custom-select')) {
         setFilterData();
         searchFilter(filterData)
         search();
-        
 
       }
     })
@@ -1066,8 +1065,6 @@ if(document.querySelector('.custom-select')) {
   })
 
   searchFilter(filterData)
-
-  //searchInput.addEventListener('change')
 
 }
 

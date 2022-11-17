@@ -220,6 +220,7 @@
     &__info {
 
         padding-top: 30px;
+        flex: 1 1 auto;
         
         @include _992 {
             padding-top: 0;
